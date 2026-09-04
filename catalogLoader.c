@@ -90,6 +90,15 @@ int parseGroupsField(char *value, CourseGroup groups[], int maxGroups) {  // Par
     return i;
 }
 
+const Course *findCourseByCode(const Catalog *catalog, const char *code) {  // para buscar los datos de un curso a partir de su codigo identificador
+    for (int i = 0; i < catalog->courseCount; i++) {
+        if (strcmp(catalog->courses[i].courseCode, code) == 0) {
+            return &catalog->courses[i];
+        }
+    }
+    return NULL;
+}
+
 int loadCatalog(const char *filePath, Catalog *catalog) {  // Para cargar los archivos de malla curricular
     FILE *ptrCatalogFile = fopen(filePath, "r");
     if (ptrCatalogFile == NULL) {

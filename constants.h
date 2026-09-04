@@ -17,5 +17,7 @@
 #define maxStudentIdLen 12
 #define maxTimeLen 6
 #define maxHistory 70
+#define nombreCarrera1 "Ingenieria en Computadores"
+#define nombreCarrera2 "Ingenieria Fisica"
 
 #endif

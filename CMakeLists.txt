@@ -7,4 +7,6 @@ add_executable(Cemestre main.c
         constants.h
         types.h
         catalogLoader.c
-        catalogLoader.h)
+        catalogLoader.h
+        studentLoader.h
+        studentLoader.c)

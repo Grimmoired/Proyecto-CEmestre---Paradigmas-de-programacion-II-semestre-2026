@@ -4,6 +4,7 @@
 #include "types.h"
 #include "constants.h"
 #include "catalogLoader.h"
+#include "studentLoader.h"
 
 void printCourse(const Course *c) { // Prueba rapida para mostrar que el programa puede leer el
     printf("Codigo: %s\n", c->courseCode);
@@ -14,6 +15,10 @@ void printCourse(const Course *c) { // Prueba rapida para mostrar que el program
     for (int i = 0; i < c->requisiteCount; i++) printf("%s ", c->requisites[i]);
     printf("\n");
 
+    printf("Correquisitos (%d): ", c->corequisiteCount);
+    for (int i = 0; i < c->corequisiteCount; i++) printf("%s ", c->corequisites[i]);
+    printf("\n");
+
     printf("Grupos (%d):\n", c->groupCount);
     for (int i = 0; i < c->groupCount; i++) {
         printf("  Grupo %s, bloques: %d\n", c->groups[i].groupId, c->groups[i].blockCount);
@@ -22,17 +27,10 @@ void printCourse(const Course *c) { // Prueba rapida para mostrar que el program
                    c->groups[i].blocks[j].startTime, c->groups[i].blocks[j].endTime);
         }
     }
+
     printf("\n");
 }
 
-const Course *findCourseByCode(const Catalog *catalog, const char *code) {  // para buscar los datos de un curso a partir de su codigo identificador
-    for (int i = 0; i < catalog->courseCount; i++) {
-        if (strcmp(catalog->courses[i].courseCode, code) == 0) {
-            return &catalog->courses[i];
-        }
-    }
-    return NULL;
-}
 
 int main(void) {
     Catalog catalog;
@@ -40,6 +38,19 @@ int main(void) {
     if (result != 0) {
         fprintf(stderr, "Error: no se pudo cargar el catalogo\n");
         return 1;
+    }
+
+    StudentHistory history;
+    int historyResult = loadStudentHistory("HistorialEstudiante.txt", &history, &catalog);
+    if (historyResult != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el historial\n");
+        return 1;
+    }
+    printf("Carnet: %s\n", history.studentId);
+    printf("Nombre: %s\n", history.studentName);
+    printf("Aprobados (%d):\n", history.approvedCount);
+    for (int i = 0; i < history.approvedCount; i++) {
+        printf("  %s\n", history.approvedCourses[i]);
     }
     printf("Cursos cargados: %d\n\n", catalog.courseCount);
 
@@ -56,6 +67,9 @@ int main(void) {
     } else {
         fprintf(stderr, "No se encontro CE1103\n");
     }
+
+    const Course *fh1000 = findCourseByCode(&catalog, "FH1000");
+    if (fh1000 != NULL) printCourse(fh1000);
 
     return 0;
 }
