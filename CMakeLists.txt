@@ -1,8 +1,8 @@
  cmake_minimum_required(VERSION 4.2)
 project(Cemestre C)
 
+ add_compile_definitions(PROJECT_ROOT_PATH="${CMAKE_SOURCE_DIR}/")
 set(CMAKE_C_STANDARD 11)
-
 add_executable(Cemestre main.c
         constants.h
         types.h

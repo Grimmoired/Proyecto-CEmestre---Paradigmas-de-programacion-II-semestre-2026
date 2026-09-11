@@ -6,7 +6,9 @@
 #include "catalogLoader.h"
 #include "studentLoader.h"
 
-void printCourse(const Course *c) { // Prueba rapida para mostrar que el programa puede leer el
+
+
+void printCourse(const Course *c) {
     printf("Codigo: %s\n", c->courseCode);
     printf("Nombre: %s\n", c->courseName);
     printf("Creditos: %d\n", c->credits);
@@ -27,49 +29,71 @@ void printCourse(const Course *c) { // Prueba rapida para mostrar que el program
                    c->groups[i].blocks[j].startTime, c->groups[i].blocks[j].endTime);
         }
     }
-
     printf("\n");
 }
 
+void printHistory(const StudentHistory *h) {
+    printf("Carnet: %s\n", h->studentId);
+    printf("Nombre: %s\n", h->studentName);
+    printf("Aprobados (%d):\n", h->approvedCount);
+    for (int i = 0; i < h->approvedCount; i++) {
+        printf("  %s\n", h->approvedCourses[i]);
+    }
+    printf("\n");
+}
+
+void testCourse(const Catalog *catalog, const char *code) {
+    const Course *course = findCourseByCode(catalog, code);
+    if (course != NULL) {
+        printCourse(course);
+    } else {
+        fprintf(stderr, "No se encontro %s\n", code);
+    }
+}
 
 int main(void) {
-    Catalog catalog;
-    int result = loadCatalog("PlanEstudioCE.txt", &catalog);
-    if (result != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el catalogo\n");
+    setvbuf(stdout, NULL, _IOLBF, 0);  // fuerza buffer por linea en stdout, para que no se desordene con stderr al correr en un pipe (CLion)
+
+    Catalog ceCatalog;
+    Catalog ifCatalog;
+    StudentHistory ceHistory;
+    StudentHistory ifHistory;
+
+    printf("=== Catalogo Computadores ===\n\n");
+    if (loadCatalog(CE_CATALOG_PATH, &ceCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el catalogo de Computadores\n");
         return 1;
     }
+    printf("Cursos cargados: %d\n\n", ceCatalog.courseCount);
 
-    StudentHistory history;
-    int historyResult = loadStudentHistory("HistorialEstudiante.txt", &history, &catalog);
-    if (historyResult != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el historial\n");
+    testCourse(&ceCatalog, "SE1100");   // caso: muchos grupos aplanados
+    testCourse(&ceCatalog, "CE1103");   // caso: multiples requisitos
+    testCourse(&ceCatalog, "FH1000");   // caso pendiente: GRUPOS: NINGUNO
+    testCourse(&ceCatalog, "QU1102");   // caso pendiente: correquisito simple
+
+    if (loadStudentHistory(CE_HISTORY_PATH, &ceHistory, &ceCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el historial de Computadores\n");
         return 1;
     }
-    printf("Carnet: %s\n", history.studentId);
-    printf("Nombre: %s\n", history.studentName);
-    printf("Aprobados (%d):\n", history.approvedCount);
-    for (int i = 0; i < history.approvedCount; i++) {
-        printf("  %s\n", history.approvedCourses[i]);
-    }
-    printf("Cursos cargados: %d\n\n", catalog.courseCount);
+    printHistory(&ceHistory);
 
-    const Course *se1100 = findCourseByCode(&catalog, "SE1100");
-    if (se1100 != NULL) {
-        printCourse(se1100);
-    } else {
-        fprintf(stderr, "No se encontro SE1100\n");
+    printf("=== Catalogo Ingenieria Fisica ===\n\n");
+    if (loadCatalog(IF_CATALOG_PATH, &ifCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el catalogo de Ingenieria Fisica\n");
+        return 1;
     }
+    printf("Cursos cargados: %d\n\n", ifCatalog.courseCount);
 
-    const Course *ce1103 = findCourseByCode(&catalog, "CE1103");
-    if (ce1103 != NULL) {
-        printCourse(ce1103);
-    } else {
-        fprintf(stderr, "No se encontro CE1103\n");
+    testCourse(&ifCatalog, "CI1107");   // caso: 33 grupos, el maximo real entre ambos catalogos
+    testCourse(&ifCatalog, "IF3502");   // caso: 2 correquisitos (el maximo real)
+    testCourse(&ifCatalog, "SE1100");   // caso: GRUPOS: NINGUNO en este catalogo especifico
+    testCourse(&ifCatalog, "MT2002");   // caso: nombre de 66 caracteres
+
+    if (loadStudentHistory(IF_HISTORY_PATH, &ifHistory, &ifCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el historial de Ingenieria Fisica\n");
+        return 1;
     }
-
-    const Course *fh1000 = findCourseByCode(&catalog, "FH1000");
-    if (fh1000 != NULL) printCourse(fh1000);
+    printHistory(&ifHistory);
 
     return 0;
 }

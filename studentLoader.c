@@ -47,6 +47,7 @@ int loadStudentHistory(const char *filePath, StudentHistory *history, const Cata
 
             for (int i = 0; i < rawCount; i++) {
                 if (findCourseByCode(catalog, rawList[i]) == NULL) {
+                    fflush(stdout);
                     fprintf(stderr, "Advertencia: codigo '%s' del historial no existe en el catalogo, se omite\n", rawList[i]);
                     continue;
                 }
