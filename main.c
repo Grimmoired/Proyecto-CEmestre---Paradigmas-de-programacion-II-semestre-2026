@@ -42,7 +42,7 @@ void printHistory(const StudentHistory *h) {
     printf("\n");
 }
 
-void testCourse(const Catalog *catalog, const char *code) {
+void testCourse(const Catalog *catalog, const char *code) {  // Casos de prueba para las implementacioens actuales de studentLoader y historyLoader
     const Course *course = findCourseByCode(catalog, code);
     if (course != NULL) {
         printCourse(course);
@@ -52,7 +52,7 @@ void testCourse(const Catalog *catalog, const char *code) {
 }
 
 int main(void) {
-    setvbuf(stdout, NULL, _IOLBF, 0);  // fuerza buffer por linea en stdout, para que no se desordene con stderr al correr en un pipe (CLion)
+    setvbuf(stdout, NULL, _IOLBF, 0);
 
     Catalog ceCatalog;
     Catalog ifCatalog;
@@ -66,10 +66,10 @@ int main(void) {
     }
     printf("Cursos cargados: %d\n\n", ceCatalog.courseCount);
 
-    testCourse(&ceCatalog, "SE1100");   // caso: muchos grupos aplanados
-    testCourse(&ceCatalog, "CE1103");   // caso: multiples requisitos
-    testCourse(&ceCatalog, "FH1000");   // caso pendiente: GRUPOS: NINGUNO
-    testCourse(&ceCatalog, "QU1102");   // caso pendiente: correquisito simple
+    testCourse(&ceCatalog, "SE1100");  
+    testCourse(&ceCatalog, "CE1103");   
+    testCourse(&ceCatalog, "FH1000"); 
+    testCourse(&ceCatalog, "QU1102");
 
     if (loadStudentHistory(CE_HISTORY_PATH, &ceHistory, &ceCatalog) != 0) {
         fprintf(stderr, "Error: no se pudo cargar el historial de Computadores\n");
@@ -84,10 +84,10 @@ int main(void) {
     }
     printf("Cursos cargados: %d\n\n", ifCatalog.courseCount);
 
-    testCourse(&ifCatalog, "CI1107");   // caso: 33 grupos, el maximo real entre ambos catalogos
-    testCourse(&ifCatalog, "IF3502");   // caso: 2 correquisitos (el maximo real)
-    testCourse(&ifCatalog, "SE1100");   // caso: GRUPOS: NINGUNO en este catalogo especifico
-    testCourse(&ifCatalog, "MT2002");   // caso: nombre de 66 caracteres
+    testCourse(&ifCatalog, "CI1107");
+    testCourse(&ifCatalog, "IF3502"); 
+    testCourse(&ifCatalog, "SE1100");
+    testCourse(&ifCatalog, "MT2002");
 
     if (loadStudentHistory(IF_HISTORY_PATH, &ifHistory, &ifCatalog) != 0) {
         fprintf(stderr, "Error: no se pudo cargar el historial de Ingenieria Fisica\n");
