@@ -5,8 +5,12 @@
 #include "constants.h"
 #include "catalogLoader.h"
 #include "studentLoader.h"
+#include "scheduleClash.h"
 
-
+#define CE_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioCE.txt"
+#define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
+#define IF_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioFI.txt"
+#define IF_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteFI.txt"
 
 void printCourse(const Course *c) {
     printf("Codigo: %s\n", c->courseCode);
@@ -23,7 +27,8 @@ void printCourse(const Course *c) {
 
     printf("Grupos (%d):\n", c->groupCount);
     for (int i = 0; i < c->groupCount; i++) {
-        printf("  Grupo %s, bloques: %d\n", c->groups[i].groupId, c->groups[i].blockCount);
+        printf("  Grupo %s, bloques: %d, choque: %s\n", c->groups[i].groupId,
+               c->groups[i].blockCount, c->groups[i].hasClash ? "SI" : "no");
         for (int j = 0; j < c->groups[i].blockCount; j++) {
             printf("    %s %s-%s\n", c->groups[i].blocks[j].day,
                    c->groups[i].blocks[j].startTime, c->groups[i].blocks[j].endTime);
@@ -51,8 +56,44 @@ void testCourse(const Catalog *catalog, const char *code) {
     }
 }
 
+void printClashSummary(const Catalog *cat) {
+    for (int c = 0; c < cat->courseCount; c++) {
+        const Course *course = &cat->courses[c];
+        if (course->hasScheduleClash) {
+            printf("CHOQUE en curso %s (%s):\n", course->courseCode, course->courseName);
+            for (int g = 0; g < course->groupCount; g++) {
+                if (course->groups[g].hasClash) {
+                    printf("  - grupo con choque: %s\n", course->groups[g].groupId);
+                }
+            }
+        }
+    }
+    printf("\n");
+}
+
+void testScheduleClashEdgeCases(void) {
+    printf("Pruebas de casos de choque de horario:\n");
+
+    ScheduleBlock a = { "MAR", "0730", "0920" };
+    ScheduleBlock b = { "MAR", "0920", "1110" };
+    printf("2 Cursos contiguos: Martes (07:30 a 09:20) y Martes (09:20 a 11:10): %s\n",
+           blocksClash(&a, &b) ? "Chocan (Incorrecto)" : "No chocan (Correcto)");
+
+    ScheduleBlock c1 = { "MAR", "0730", "0920" };
+    ScheduleBlock d1 = { "JUE", "0730", "0920" }; //
+    printf("Mismo horario, distinto dia: Martes (07:30 a 09:20) y Jueves (07:30 a 09:20): %s\n",
+           blocksClash(&c1, &d1) ? "Chocan (Incorrecto)" : "No chocan (Correcto)");
+
+    ScheduleBlock e = { "MAR", "0730", "0920" };
+    ScheduleBlock f = { "MAR", "0800", "0850" }; //
+    printf("Mismo dia, se sobrelapan los horarios: Martes (07:30 a 09:20) y Martes (08:00 a 08:50): %s\n",
+           blocksClash(&e, &f) ? "Chocan (Correcto)" : "No chocan (Incorrecto)");
+
+    printf("\n");
+}
+
 int main(void) {
-    setvbuf(stdout, NULL, _IOLBF, 0);  // fuerza buffer por linea en stdout, para que no se desordene con stderr al correr en un pipe (CLion)
+    setvbuf(stdout, NULL, _IOLBF, 0);
 
     Catalog ceCatalog;
     Catalog ifCatalog;
@@ -66,10 +107,13 @@ int main(void) {
     }
     printf("Cursos cargados: %d\n\n", ceCatalog.courseCount);
 
-    testCourse(&ceCatalog, "SE1100");   // caso: muchos grupos aplanados
-    testCourse(&ceCatalog, "CE1103");   // caso: multiples requisitos
-    testCourse(&ceCatalog, "FH1000");   // caso pendiente: GRUPOS: NINGUNO
-    testCourse(&ceCatalog, "QU1102");   // caso pendiente: correquisito simple
+    detectScheduleClashes(&ceCatalog);
+    printClashSummary(&ceCatalog);
+
+    testCourse(&ceCatalog, "SE1100");
+    testCourse(&ceCatalog, "CE1103");
+    testCourse(&ceCatalog, "FH1000");
+    testCourse(&ceCatalog, "QU1102");
 
     if (loadStudentHistory(CE_HISTORY_PATH, &ceHistory, &ceCatalog) != 0) {
         fprintf(stderr, "Error: no se pudo cargar el historial de Computadores\n");
@@ -84,16 +128,21 @@ int main(void) {
     }
     printf("Cursos cargados: %d\n\n", ifCatalog.courseCount);
 
-    testCourse(&ifCatalog, "CI1107");   // caso: 33 grupos, el maximo real entre ambos catalogos
-    testCourse(&ifCatalog, "IF3502");   // caso: 2 correquisitos (el maximo real)
-    testCourse(&ifCatalog, "SE1100");   // caso: GRUPOS: NINGUNO en este catalogo especifico
-    testCourse(&ifCatalog, "MT2002");   // caso: nombre de 66 caracteres
+    detectScheduleClashes(&ifCatalog);
+    printClashSummary(&ifCatalog);
+
+    testCourse(&ifCatalog, "CI1107");
+    testCourse(&ifCatalog, "IF3502");
+    testCourse(&ifCatalog, "SE1100");
+    testCourse(&ifCatalog, "MT2002");
 
     if (loadStudentHistory(IF_HISTORY_PATH, &ifHistory, &ifCatalog) != 0) {
         fprintf(stderr, "Error: no se pudo cargar el historial de Ingenieria Fisica\n");
         return 1;
     }
     printHistory(&ifHistory);
+
+    testScheduleClashEdgeCases();
 
     return 0;
 }

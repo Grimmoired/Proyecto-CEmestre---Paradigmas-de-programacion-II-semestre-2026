@@ -25,7 +25,7 @@ int loadStudentHistory(const char *filePath, StudentHistory *history, const Cata
         if (strchr(line, '\n') == NULL && !feof(ptrStudentHistoryFile)) {
             fprintf(stderr, "Advertencia: se alcanzo el maximo de %zu caracteres, linea truncada\n", sizeof(line));
         }
-        line[strcspn(line, "\n")] = '\0';
+        line[strcspn(line, "\r\n")] = '\0';
 
         if (charPrefix("CARNET:", line)) {
             char *value = line + strlen("CARNET:");

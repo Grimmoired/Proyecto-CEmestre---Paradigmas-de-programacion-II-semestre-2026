@@ -32,6 +32,7 @@ typedef struct {
     int corequisiteCount;
     int hasScheduleClash;
     int canEnroll;
+    int hasCycle;
 } Course;
 
 typedef struct {

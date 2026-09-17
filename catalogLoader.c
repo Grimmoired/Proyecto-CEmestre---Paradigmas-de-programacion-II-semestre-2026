@@ -44,6 +44,11 @@ int parseGroupsField(char *value, CourseGroup groups[], int maxGroups) {  // Par
 
     while (token != NULL && i < maxGroups) {
         char *openParen = strchr(token, '(');
+        if (openParen == NULL) {
+            fprintf(stderr, "Advertencia: grupo '%s' sin formato valido '(', se omite\n", token);
+            token = strtok_r(NULL, ";", &restGroups);
+            continue;
+        }
         size_t idLen = openParen - token;
         if (idLen > maxGroupIdLen - 1) {
             idLen = maxGroupIdLen - 1;
@@ -114,7 +119,7 @@ int loadCatalog(const char *filePath, Catalog *catalog) {  // Para cargar los ar
         if (strchr(line, '\n') == NULL && !feof(ptrCatalogFile)) {
             fprintf(stderr, "Advertencia: se alcanzo el maximo de %zu caracteres, linea truncada\n", sizeof(line));
         }
-        line[strcspn(line, "\n")] = '\0';
+        line[strcspn(line, "\r\n")] = '\0';
 
         if (charPrefix("CODIGO:", line)) {
             char *value = line + strlen("CODIGO:");
