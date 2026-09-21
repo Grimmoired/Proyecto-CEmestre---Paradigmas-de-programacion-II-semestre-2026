@@ -6,6 +6,7 @@
 #include "catalogLoader.h"
 #include "studentLoader.h"
 #include "scheduleClash.h"
+#include "Requisites.h"
 
 #define CE_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioCE.txt"
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
