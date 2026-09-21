@@ -5,10 +5,10 @@
 #include "constants.h"
 
 
-int fulfillRequisites(char requisites[][maxCourseCodeLen], int requisiteCount, const StudentHistory *history);
+int fulfillRequisites(const char requisites[][maxCourseCodeLen], int requisiteCount, const StudentHistory *history);
 
 int fulfillCorequisites(
-    char corequisites[][maxCourseCodeLen],
+    const char corequisites[][maxCourseCodeLen],
     int corequisiteCount,
     const StudentHistory *history,
     const Catalog *catalog,
@@ -23,8 +23,8 @@ typedef struct {
     int courseCount;
 } CycleReport;
 
-int detectCycles(const Catalog *catalog, CycleReport cyclesOut[], int maxCycles);
+int detectCycles(Catalog *catalog, CycleReport cyclesOut[]);
 
-typedef enum { COLOR_WHITE, COLOR_GRAY, COLOR_BLACK } NodeColor;
+
 
 #endif

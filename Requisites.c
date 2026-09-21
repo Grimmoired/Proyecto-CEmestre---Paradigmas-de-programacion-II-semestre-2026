@@ -32,11 +32,7 @@ static int isCodeApproved(const char *code, const StudentHistory *history) {
     return 0;
 }
 
-int fulfillRequisites(
-    char requisites[][maxCourseCodeLen],
-    int requisiteCount,
-    const StudentHistory *history
-) {
+int fulfillRequisites(const char requisites[][maxCourseCodeLen], int requisiteCount, const StudentHistory *history) {
     for (int i = 0; i < requisiteCount; i++) {
         if (!isCodeApproved(requisites[i], history)) {
             return 0;
@@ -47,7 +43,7 @@ int fulfillRequisites(
 
 
 int fulfillCorequisites(
-    char corequisites[][maxCourseCodeLen],
+    const char corequisites[][maxCourseCodeLen],
     int corequisiteCount,
     const StudentHistory *history,
     const Catalog *catalog,
@@ -109,13 +105,13 @@ void computeEligibility(Catalog *catalog, const StudentHistory *history) {
         
         int checkCoreqs = fulfillCorequisites(course->corequisites, course->corequisiteCount, history, catalog, ancestors, 1);
 
-        course->canEnroll = (checkReqs && checkCoreqs) ? 1 : 0;
+        course->canEnroll = (checkReqs && checkCoreqs && !isCodeApproved(course->courseCode, history)) ? 1 : 0;
     }
 }
 
 
 
-
+typedef enum { COLOR_WHITE, COLOR_GRAY, COLOR_BLACK } NodeColor;
 
 static void dfsCycles(
     const Catalog *catalog,
@@ -124,8 +120,7 @@ static void dfsCycles(
     int path[],
     int *pathCount,
     CycleReport cycleOut[],
-    int *cycleCount,
-    int maxCycles
+    int *cycleCount
 ) {
     colors[node] = COLOR_GRAY;
     path[*pathCount] = node;
@@ -140,7 +135,7 @@ static void dfsCycles(
         }
 
         if (colors[neighbor] == COLOR_WHITE) {
-            dfsCycles(catalog, neighbor, colors, path, pathCount, cycleOut, cycleCount, maxCycles);
+            dfsCycles(catalog, neighbor, colors, path, pathCount, cycleOut, cycleCount);
 
         } else if (colors[neighbor] == COLOR_GRAY) {
             /* Ciclo detectado: 'neighbor' es parte del camino actual
@@ -180,7 +175,7 @@ void markCycle(Course courses[], const CycleReport cycleOut[], int cycleCount) {
     }
 }
 
-int detectCycles(const Catalog *catalog, CycleReport cycleOut[],int maxCycles) {
+int detectCycles(Catalog *catalog, CycleReport cycleOut[]) {
     NodeColor colors[maxCourses];
     for (int i = 0; i < catalog->courseCount; i++) {
         colors[i] = COLOR_WHITE;
@@ -192,7 +187,7 @@ int detectCycles(const Catalog *catalog, CycleReport cycleOut[],int maxCycles) {
 
     for (int i = 0; i < catalog->courseCount; i++) {
         if (colors[i] == COLOR_WHITE) {
-            dfsCycles(catalog, i, colors, path, &pathCount, cycleOut, &cycleCount, maxCycles);
+            dfsCycles(catalog, i, colors, path, &pathCount, cycleOut, &cycleCount);
         }
     }
     markCycle(catalog->courses, cycleOut, cycleCount);
