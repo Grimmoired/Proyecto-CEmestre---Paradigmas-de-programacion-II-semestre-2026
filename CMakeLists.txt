@@ -11,4 +11,7 @@ add_executable(Cemestre main.c
         studentLoader.h
         studentLoader.c
         scheduleClash.c
-        scheduleClash.h)
+        scheduleClash.h
+        Requisites.h
+        Requisites.c
+)
