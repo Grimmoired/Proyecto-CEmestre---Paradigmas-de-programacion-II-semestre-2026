@@ -43,6 +43,7 @@ typedef struct {
 typedef struct {
     char studentId[maxStudentIdLen];
     char studentName[maxStudentNameLen];
+    char gender;
     char approvedCourses[maxHistory][maxCourseCodeLen];
     int approvedCount;
 } StudentHistory;

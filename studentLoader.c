@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 #include "studentLoader.h"
 #include "catalogLoader.h"
@@ -38,6 +39,18 @@ int loadStudentHistory(const char *filePath, StudentHistory *history, const Cata
             while (*value == ' ') value++;
             strncpy(history->studentName, value, maxStudentNameLen - 1);
             history->studentName[maxStudentNameLen - 1] = '\0';
+        }
+        else if (charPrefix("GENERO:", line)) {
+            char *value = line + strlen("GENERO:");
+            while (*value == ' ') value++;
+
+            char g = (char) toupper((unsigned char) value[0]);
+            if (g == 'H' || g == 'M') {
+                history->gender = g;
+            } else {
+                fprintf(stderr, "Advertencia: El genero '%s' no es valido, las unicas opciones soportadas son H (Hombre) y M (Mujer), se asignara H por defecto \n", value);
+                history->gender = 'M';
+            }
         }
         else if (charPrefix("APROBADOS:", line)) {
             char *value = line + strlen("APROBADOS:");

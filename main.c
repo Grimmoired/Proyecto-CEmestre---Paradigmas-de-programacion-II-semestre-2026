@@ -6,6 +6,7 @@
 #include "catalogLoader.h"
 #include "studentLoader.h"
 #include "scheduleClash.h"
+#include "Requisites.h"
 
 #define CE_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioCE.txt"
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
@@ -92,6 +93,35 @@ void testScheduleClashEdgeCases(void) {
     printf("\n");
 }
 
+void testEligibility(const Catalog *catalog, const StudentHistory *history){
+    const char *article = (history->gender == 'M') ? "La" : "El";
+    for (int c = 0; c < catalog->courseCount; c++) {
+        const Course *course = &catalog->courses[c];
+        if (course->canEnroll) {
+            printf("%s estudiante %s puede llevar el curso: (%s)\n",
+                   article, history->studentName, course->courseName);
+        }
+    }
+}
+
+void printCycles(const Catalog *catalog, const CycleReport cyclesOut[], int cycleCount) {
+    for (int i = 0; i < cycleCount; i++) {
+        const CycleReport *cycle = &cyclesOut[i];
+
+        for (int j = 0; j < cycle->courseCount; j++) {
+            int idx = cycle->courseIdx[j];
+            printf("%s", catalog->courses[idx].courseCode);
+
+            if ( j < cycle->courseCount-1) {
+                printf(" -> ");
+            }
+        }
+
+        printf(" -> %s\n", catalog->courses[cycle->courseIdx[0]].courseCode);
+    }
+    printf("\n");
+}
+
 int main(void) {
     setvbuf(stdout, NULL, _IOLBF, 0);
 
@@ -99,6 +129,8 @@ int main(void) {
     Catalog ifCatalog;
     StudentHistory ceHistory;
     StudentHistory ifHistory;
+    CycleReport ifReport[maxCycles];
+    CycleReport ceReport[maxCycles];
 
     printf("=== Catalogo Computadores ===\n\n");
     if (loadCatalog(CE_CATALOG_PATH, &ceCatalog) != 0) {
@@ -140,9 +172,21 @@ int main(void) {
         fprintf(stderr, "Error: no se pudo cargar el historial de Ingenieria Fisica\n");
         return 1;
     }
-    printHistory(&ifHistory);
 
+    // Pruebas para monitorear el correcto funcionamiento del codigo
+
+    printHistory(&ifHistory);
     testScheduleClashEdgeCases();
+    computeEligibility(&ifCatalog, &ifHistory);
+    testEligibility(&ifCatalog, &ifHistory);
+    computeEligibility(&ceCatalog, &ceHistory);
+    testEligibility(&ceCatalog, &ceHistory);
+
+    int ceCycleCount = detectCycles(&ceCatalog, ceReport);
+    printCycles(&ceCatalog, ceReport, ceCycleCount);
+    int ifCycleCount = detectCycles(&ifCatalog, ifReport);
+    printCycles(&ifCatalog, ifReport, ifCycleCount);
+
 
     return 0;
 }
