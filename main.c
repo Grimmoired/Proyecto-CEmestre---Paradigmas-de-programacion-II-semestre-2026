@@ -7,6 +7,7 @@
 #include "studentLoader.h"
 #include "scheduleClash.h"
 #include "Requisites.h"
+#include "outputWriter.h"
 
 #define CE_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioCE.txt"
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
@@ -187,6 +188,16 @@ int main(void) {
     int ifCycleCount = detectCycles(&ifCatalog, ifReport);
     printCycles(&ifCatalog, ifReport, ifCycleCount);
 
+    if (writeCatalogToJSON(CE_OUTPUT_PATH, &ceCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo exportar el catalogo de Computadores\n");
+        return 1;
+    }
+    if (writeCatalogToJSON(IF_OUTPUT_PATH, &ifCatalog) != 0) {
+        fprintf(stderr, "Error: no se pudo exportar el catalogo de Ingenieria Fisica\n");
+        return 1;
+    }
+
+    printf("Se completo la creacion de los JSONs: %s y %s\n", CE_OUTPUT_PATH, IF_OUTPUT_PATH);
 
     return 0;
 }

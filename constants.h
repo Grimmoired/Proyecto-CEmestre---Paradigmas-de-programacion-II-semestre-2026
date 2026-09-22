@@ -24,5 +24,7 @@
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
 #define IF_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioFI.txt"
 #define IF_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteFI.txt"
+#define CE_OUTPUT_PATH   PROJECT_ROOT_PATH "OutputCE.json"
+#define IF_OUTPUT_PATH   PROJECT_ROOT_PATH "OutputIF.json"
 
 #endif
