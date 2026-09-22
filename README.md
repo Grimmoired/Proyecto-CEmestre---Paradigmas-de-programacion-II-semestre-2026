@@ -1,1 +1,2 @@
-# Proyecto-CEmestre---Paradigmas-de-programacion-II-semestre-2026
+# Proyecto-CEmestre---Paradigmas-de-programacion-II-semestre-2026.
+
