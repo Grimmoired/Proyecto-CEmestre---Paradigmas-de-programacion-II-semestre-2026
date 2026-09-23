@@ -139,7 +139,7 @@ grupo de la opción de Artes Musicales.
 ### Manejo de un código no reconocido en el historial
 
 Si un código del archivo de historial no aparece en el catálogo, por ejemplo, un typo,
-o un curso que no está entre los primeros 4 semestres, el programa no se detiene, sino que simplemente se se
+o un curso que no está entre los primeros 4 semestres, el programa no se detiene, sino que simplemente se
 imprime una advertencia por la salida de error y ese código simplemente se ignora, y el programa continua
 leyendo el resto del historial.
 
