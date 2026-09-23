@@ -1,0 +1,488 @@
+{
+  "courses": [
+{
+  "courseCode": "CI0205",
+  "courseName": "Prueba avanzada de ingles",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA0101",
+  "courseName": "Matematica general",
+  "credits": 2,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1750"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1220"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1101",
+  "courseName": "Introduccion a la Programacion",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1104",
+  "courseName": "Fundamentos de Sistemas Computacionales",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": ["CE1101"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA1102",
+  "courseName": "Calculo Diferencial e Integral",
+  "credits": 4,
+  "requisites": ["MA0101"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "1020"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1950"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1600", "endTime": "1850"}, {"day": "VIE", "startTime": "1600", "endTime": "1750"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA1403",
+  "courseName": "Matematica Discreta",
+  "credits": 4,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}, {"day": "VIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "1950"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "QU1102",
+  "courseName": "Laboratorio de Quimica Basica I",
+  "credits": 1,
+  "requisites": [],
+  "corequisites": ["QU1106"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "QU1106",
+  "courseName": "Quimica Basica I",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": ["QU1102"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "SE1100",
+  "courseName": "Actividad Cultural I",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "SE1101_1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "SE1101_2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "SE1102_1", "hasClash": false, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "1950"}]},
+    {"groupId": "SE1102_2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "SE1102_3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "SE1200",
+  "courseName": "Actividad Deportiva I",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "SE1201_1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "SE1201_2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "SE1204_1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "SE1204_2", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "SE1204_3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1103",
+  "courseName": "Algoritmos y Estructuras de Datos I",
+  "credits": 4,
+  "requisites": ["CE1101", "CE1104", "MA1403"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}, {"day": "VIE", "startTime": "1700", "endTime": "1850"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1105",
+  "courseName": "Principios de Modelado en Ingenieria",
+  "credits": 3,
+  "requisites": ["CE1104"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1900", "endTime": "2050"}, {"day": "MAR", "startTime": "1900", "endTime": "2050"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}, {"day": "VIE", "startTime": "1700", "endTime": "1850"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CI1407",
+  "courseName": "Habilidades de Comunicacion en Ingenieria",
+  "credits": 2,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0930", "endTime": "1220"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "0730", "endTime": "1020"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CS1502",
+  "courseName": "Introduccion a la Tecnica, Ciencia y Tecnologia",
+  "credits": 1,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "FI1101",
+  "courseName": "Fisica General I",
+  "credits": 3,
+  "requisites": ["MA1102"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "FI1201",
+  "courseName": "Laboratorio de Fisica General I",
+  "credits": 1,
+  "requisites": [],
+  "corequisites": ["FI1101"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA1103",
+  "courseName": "Calculo y Algebra Lineal",
+  "credits": 4,
+  "requisites": ["MA1102"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}, {"day": "VIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "1950"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1600", "endTime": "1750"}, {"day": "MAR", "startTime": "1600", "endTime": "1750"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "SAB", "startTime": "0730", "endTime": "1120"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "SE1400",
+  "courseName": "Actividad Cultural-Deportiva",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE2103",
+  "courseName": "Algoritmos y Estructuras de Datos II",
+  "credits": 4,
+  "requisites": ["CE1103", "CE1105"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CS2101",
+  "courseName": "Ambiente Humano",
+  "credits": 2,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1220"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "0930", "endTime": "1220"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1220"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1750"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "EL2113",
+  "courseName": "Circuitos Electricos en Corriente Continua",
+  "credits": 4,
+  "requisites": ["FI1101", "MA1102"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}, {"day": "MIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "1120"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "FH1000",
+  "courseName": "Centros de Formacion Humanistica",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "FI1102",
+  "courseName": "Fisica General II",
+  "credits": 3,
+  "requisites": ["FI1101"],
+  "corequisites": ["MA1102"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}, {"day": "VIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1300", "endTime": "1450"}, {"day": "VIE", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "FI1202",
+  "courseName": "Laboratorio de Fisica General II",
+  "credits": 1,
+  "requisites": ["FI1201"],
+  "corequisites": ["FI1102"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA2104",
+  "courseName": "Calculo Superior",
+  "credits": 4,
+  "requisites": ["MA1103"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "1950"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "SAB", "startTime": "0730", "endTime": "1120"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1106",
+  "courseName": "Paradigmas de Programacion",
+  "credits": 3,
+  "requisites": ["CE2103"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE2201",
+  "courseName": "Laboratorio de Circuitos Electricos",
+  "credits": 1,
+  "requisites": ["FI1202"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "EL2114",
+  "courseName": "Circuitos Electricos en Corriente Alterna",
+  "credits": 4,
+  "requisites": ["EL2113"],
+  "corequisites": ["EL2207"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}, {"day": "VIE", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}, {"day": "VIE", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "EL2207",
+  "courseName": "Elementos Activos",
+  "credits": 4,
+  "requisites": ["EL2113"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "PI2609",
+  "courseName": "Probabilidad y Estadistica",
+  "credits": 2,
+  "requisites": ["MA2104"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "1020"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "SO4604",
+  "courseName": "Seguridad y Salud Ocupacional",
+  "credits": 3,
+  "requisites": ["FI1102"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "1020"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1950"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "0730", "endTime": "1020"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+}
+  ]
+}

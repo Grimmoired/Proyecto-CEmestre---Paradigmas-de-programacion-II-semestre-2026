@@ -14,4 +14,6 @@ add_executable(Cemestre main.c
         scheduleClash.h
         Requisites.h
         Requisites.c
+        outputWriter.h
+        outputWriter.c
 )

@@ -11,12 +11,12 @@
 #include "constants.h"
 #include "catalogLoader.h"
 
-bool charPrefix(const char *prefix, const char *str) {  // Para identificar a que tipo de dato corresponde cada linea de codigo
+bool charPrefix(const char *prefix, const char *str) {
     size_t len = strlen(prefix);
     return strncmp(prefix, str, len) == 0;
 }
 
-int parseCodeList(char *value, char list[][maxCourseCodeLen], int maxElements) {  // Para tokenizar los datos de requisitos y corequisitos separados por comas
+int parseCodeList(char *value, char list[][maxCourseCodeLen], int maxElements) {
     int i = 0;
     char *rest;
     if (strcmp(value, "NINGUNO") == 0) return 0;
@@ -36,7 +36,7 @@ int parseCodeList(char *value, char list[][maxCourseCodeLen], int maxElements) {
     return i;
 }
 
-int parseGroupsField(char *value, CourseGroup groups[], int maxGroups) {  // Para tokenizar los datos de horario de grupo separados por ;
+int parseGroupsField(char *value, CourseGroup groups[], int maxGroups) {
     if (strcmp(value, "NINGUNO") == 0) return 0;
     int i = 0;
     char *restGroups;
@@ -95,7 +95,7 @@ int parseGroupsField(char *value, CourseGroup groups[], int maxGroups) {  // Par
     return i;
 }
 
-const Course *findCourseByCode(const Catalog *catalog, const char *code) {  // para buscar los datos de un curso a partir de su codigo identificador
+const Course *findCourseByCode(const Catalog *catalog, const char *code) {
     for (int i = 0; i < catalog->courseCount; i++) {
         if (strcmp(catalog->courses[i].courseCode, code) == 0) {
             return &catalog->courses[i];
@@ -104,7 +104,7 @@ const Course *findCourseByCode(const Catalog *catalog, const char *code) {  // p
     return NULL;
 }
 
-int loadCatalog(const char *filePath, Catalog *catalog) {  // Para cargar los archivos de malla curricular
+int loadCatalog(const char *filePath, Catalog *catalog) {
     FILE *ptrCatalogFile = fopen(filePath, "r");
     if (ptrCatalogFile == NULL) {
         return -1;

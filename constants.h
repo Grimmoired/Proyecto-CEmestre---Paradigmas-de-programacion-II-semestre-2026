@@ -6,7 +6,7 @@
 #define CONSTANTS_H
 
 #define maxCourses 70
-#define maxGroupsPerCourse 40
+#define maxGroupsPerCourse 5
 #define maxScheduleBlocks 3
 #define maxRequisites 3
 #define maxCorequisites 3
@@ -24,5 +24,7 @@
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
 #define IF_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioFI.txt"
 #define IF_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteFI.txt"
+#define CE_OUTPUT_PATH   PROJECT_ROOT_PATH "OutputCE.json"
+#define IF_OUTPUT_PATH   PROJECT_ROOT_PATH "OutputIF.json"
 
 #endif
