@@ -58,9 +58,9 @@ cmake .. -G "MinGW Makefiles"
 mingw32-make
 ```
 
-Esto generará el ejecutable "CEmestre.exe" en la carpeta build, use el siguiente comando para ejecutar el binario y crear los archivos de Output, asi como imprimir en consola todos los resultados de lectura y comprobaciones de catalogos e historiales.
+Esto generará el ejecutable "CEmestre.exe" en la carpeta build, use el siguiente comando para ejecutar el binario y crear el archivo de Output para la carrera e historial de estudiante escogido, asi como imprimir en consola todos los resultados de lectura y comprobaciones de catalogo e historial.
 ```cmd
-.\Cemestre.exe 2>&1
+.\Cemestre.exe <ArchivoDePlanDeEstudioCarrera.txt> <ArchivoDeHistorialDeEstudiante.txt>
 ```
 ---
 
