@@ -68,7 +68,7 @@ Esto generará el ejecutable "CEmestre.exe" en la carpeta build, use el siguient
 
 Como grupo, decidimos trabajar de forma "lineal" en vez de en paralelo ya que en 
 semestres anteriores esto nos ha dado buenos resultados al trabajar juntos, asi que 
-procedimos a desglosar los requerimientos del proyectoen 4 cuartiles con una carga de trabajo mas o menos equitativa,
+procedimos a desglosar los requerimientos del proyecto en 4 cuartiles con una carga de trabajo mas o menos equitativa,
 cada persona se encargó de un cuartil del trabajo total y le entregó su parte ya funcionando a la persona encargada del siguiente cuartil, la distribucion fue la siguiente:
 
 1. Carga del catálogo y del historial del estudiante (`catalogLoader`, `studentLoader`):
