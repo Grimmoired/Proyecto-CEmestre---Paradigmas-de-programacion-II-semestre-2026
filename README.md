@@ -36,13 +36,33 @@ la Guía de Horarios institucional del TEC, tomando solamente la sede de Cartago
 
 El proyecto se desarrolló en CLion, con CMake y el estándar C11; debido a que esta solo es la primera parte de un proyecto mas grande, el main imprime una serie de comprobaciones para demostrar que los archivos se leen correctamente y las implementaciones de deteccion de choques de horario y corequesitos se efectuaron correctamente, al final deja como output los archivos JSON que se usaran en la siguiente etapa.
 
-1. Abrir la carpeta del proyecto en CLion (o cualquier IDE que soporte CMake).
-2. Confirmar que los archivos de entrada (`PlanEstudioCE.txt`, `PlanEstudioFI.txt`,
-   `HistorialEstudianteCE.txt`, `HistorialEstudianteFI.txt`) estén en la raíz del
-   proyecto, junto a `CMakeLists.txt`.
-3. Compilar y correr el target `Cemestre`.
-4. El programa va a imprimir en consola el resultado de las pruebas de cada módulo, y
-   al final va a generar `OutputCE.json` y `OutputIF.json` en la raíz del proyecto.
+### Requisitos
+
+### Linux
+- GCC 7.0 o superior
+- CMake 3.5 o superior
+- Make
+
+### Windows
+- MinGW-w64 con GCC
+- CMake 3.10 o superior
+- Los tres deben estar agregados al PATH del sistema
+
+### Compilación
+
+Abra una terminal en la raíz del proyecto y ejecute:
+```bash
+mkdir build
+cd build
+cmake .. -G "MinGW Makefiles"
+mingw32-make
+```
+
+Esto generará el ejecutable "CEmestre.exe" en la carpeta build, use el siguiente comando para ejecutar el binario y crear los archivos de Output, asi como imprimir en consola todos los resultados de lectura y comprobaciones de catalogos e historiales.
+```cmd
+.\Cemestre.exe 2>&1
+```
+---
 
 ## Organización del trabajo
 
