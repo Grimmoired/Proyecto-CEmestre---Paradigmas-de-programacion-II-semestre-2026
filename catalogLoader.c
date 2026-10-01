@@ -23,7 +23,7 @@ int parseCodeList(char *value, char list[][maxCourseCodeLen], int maxElements) {
     char *token = strtok_r(value, ",", &rest);
 
     while (token != NULL && i < maxElements) {
-        while (*token == ' ') token++;  // caso especial para los cursos CE1101 y CE1104
+        while (*token == ' ') token++;
         strncpy(list[i], token, maxCourseCodeLen - 1);
         list[i][maxCourseCodeLen - 1] = '\0';
         i++;

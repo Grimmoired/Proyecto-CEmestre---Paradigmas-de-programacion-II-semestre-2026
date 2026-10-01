@@ -37,7 +37,6 @@ int fulfillRequisites(const char requisites[][maxCourseCodeLen], int requisiteCo
     return 1;
 }
 
-
 int fulfillCorequisites(
     const char corequisites[][maxCourseCodeLen],
     int corequisiteCount,

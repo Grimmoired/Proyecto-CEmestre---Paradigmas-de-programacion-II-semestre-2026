@@ -49,7 +49,7 @@ int loadStudentHistory(const char *filePath, StudentHistory *history, const Cata
                 history->gender = g;
             } else {
                 fprintf(stderr, "Advertencia: El genero '%s' no es valido, las unicas opciones soportadas son H (Hombre) y M (Mujer), se asignara H por defecto \n", value);
-                history->gender = 'M';
+                history->gender = 'H';
             }
         }
         else if (charPrefix("APROBADOS:", line)) {

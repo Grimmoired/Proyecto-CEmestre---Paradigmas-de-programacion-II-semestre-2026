@@ -6,7 +6,7 @@
 #include "constants.h"
 
 int timeToMinutes(const char *hhmm) {
-    // Solo acepta el formato "HHMM", ej. "0730" -> 7*60+30 = 450
+    // Solo acepta el formato "HHMM", ej. "0730"
     if (hhmm == NULL || strlen(hhmm) != 4) {
         return -1;
     }

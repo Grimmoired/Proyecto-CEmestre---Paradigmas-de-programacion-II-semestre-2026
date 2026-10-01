@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-int writeCatalogToJSON(const char *filePath, const Catalog *catalog);
+int writeCatalogToJSON(const char *filePath, const Catalog *catalog, const char *careerName);
 
 #endif

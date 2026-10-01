@@ -48,8 +48,6 @@ void testCourse(const Catalog *catalog, const char *code) {
     const Course *course = findCourseByCode(catalog, code);
     if (course != NULL) {
         printCourse(course);
-    } else {
-        fprintf(stderr, "No se encontro %s\n", code);
     }
 }
 
@@ -77,19 +75,19 @@ void testScheduleClashEdgeCases(void) {
            blocksClash(&a, &b) ? "Chocan (Incorrecto)" : "No chocan (Correcto)");
 
     ScheduleBlock c1 = { "MAR", "0730", "0920" };
-    ScheduleBlock d1 = { "JUE", "0730", "0920" }; //
+    ScheduleBlock d1 = { "JUE", "0730", "0920" };
     printf("Mismo horario, distinto dia: Martes (07:30 a 09:20) y Jueves (07:30 a 09:20): %s\n",
            blocksClash(&c1, &d1) ? "Chocan (Incorrecto)" : "No chocan (Correcto)");
 
     ScheduleBlock e = { "MAR", "0730", "0920" };
-    ScheduleBlock f = { "MAR", "0800", "0850" }; //
+    ScheduleBlock f = { "MAR", "0800", "0850" };
     printf("Mismo dia, se sobrelapan los horarios: Martes (07:30 a 09:20) y Martes (08:00 a 08:50): %s\n",
            blocksClash(&e, &f) ? "Chocan (Correcto)" : "No chocan (Incorrecto)");
 
     printf("\n");
 }
 
-void testEligibility(const Catalog *catalog, const StudentHistory *history){
+void testEligibility(const Catalog *catalog, const StudentHistory *history) {
     const char *article = (history->gender == 'M') ? "La" : "El";
     for (int c = 0; c < catalog->courseCount; c++) {
         const Course *course = &catalog->courses[c];
@@ -103,96 +101,59 @@ void testEligibility(const Catalog *catalog, const StudentHistory *history){
 void printCycles(const Catalog *catalog, const CycleReport cyclesOut[], int cycleCount) {
     for (int i = 0; i < cycleCount; i++) {
         const CycleReport *cycle = &cyclesOut[i];
-
         for (int j = 0; j < cycle->courseCount; j++) {
             int idx = cycle->courseIdx[j];
             printf("%s", catalog->courses[idx].courseCode);
-
-            if ( j < cycle->courseCount-1) {
-                printf(" -> ");
-            }
+            if (j < cycle->courseCount - 1) printf(" -> ");
         }
-
         printf(" -> %s\n", catalog->courses[cycle->courseIdx[0]].courseCode);
     }
     printf("\n");
 }
 
-int main(void) {
+void processCarrera(const char *catalogPath, const char *historyPath, const char *outputPath, const char *careerName) {
+    Catalog catalog;
+    StudentHistory history;
+    CycleReport report[maxCycles];
+
+    if (loadCatalog(catalogPath, &catalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el catalogo (%s)\n", catalogPath);
+        return;
+    }
+    printf("Cursos cargados: %d\n\n", catalog.courseCount);
+
+    detectScheduleClashes(&catalog);
+    printClashSummary(&catalog);
+
+    if (loadStudentHistory(historyPath, &history, &catalog) != 0) {
+        fprintf(stderr, "Error: no se pudo cargar el historial (%s)\n", historyPath);
+        return;
+    }
+    printHistory(&history);
+
+    computeEligibility(&catalog, &history);
+    testEligibility(&catalog, &history);
+
+    int cycleCount = detectCycles(&catalog, report);
+    printCycles(&catalog, report, cycleCount);
+
+    if (writeCatalogToJSON(outputPath, &catalog, careerName) != 0) {
+        fprintf(stderr, "Error: no se pudo exportar el catalogo (%s)\n", outputPath);
+        return;
+    }
+    printf("Se completo la creacion del JSON: %s (carrera: %s)\n", outputPath, careerName);
+}
+
+int main(int argc, char *argv[]) {
     setvbuf(stdout, NULL, _IOLBF, 0);
 
-    Catalog ceCatalog;
-    Catalog ifCatalog;
-    StudentHistory ceHistory;
-    StudentHistory ifHistory;
-    CycleReport ifReport[maxCycles];
-    CycleReport ceReport[maxCycles];
+    const char *catalogPath = (argc > 1) ? argv[1] : CE_CATALOG_PATH;
+    const char *historyPath = (argc > 2) ? argv[2] : CE_HISTORY_PATH;
+    const char *outputPath  = (argc > 3) ? argv[3] : OUTPUT_PATH;
+    const char *careerName  = (argc > 4) ? argv[4] : nombreCarrera1;
 
-    printf("=== Catalogo Computadores ===\n\n");
-    if (loadCatalog(CE_CATALOG_PATH, &ceCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el catalogo de Computadores\n");
-        return 1;
-    }
-    printf("Cursos cargados: %d\n\n", ceCatalog.courseCount);
-
-    detectScheduleClashes(&ceCatalog);
-    printClashSummary(&ceCatalog);
-
-    testCourse(&ceCatalog, "SE1100");
-    testCourse(&ceCatalog, "CE1103");
-    testCourse(&ceCatalog, "FH1000");
-    testCourse(&ceCatalog, "QU1102");
-
-    if (loadStudentHistory(CE_HISTORY_PATH, &ceHistory, &ceCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el historial de Computadores\n");
-        return 1;
-    }
-    printHistory(&ceHistory);
-
-    printf("=== Catalogo Ingenieria Fisica ===\n\n");
-    if (loadCatalog(IF_CATALOG_PATH, &ifCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el catalogo de Ingenieria Fisica\n");
-        return 1;
-    }
-    printf("Cursos cargados: %d\n\n", ifCatalog.courseCount);
-
-    detectScheduleClashes(&ifCatalog);
-    printClashSummary(&ifCatalog);
-
-    testCourse(&ifCatalog, "CI1107");
-    testCourse(&ifCatalog, "IF3502");
-    testCourse(&ifCatalog, "SE1100");
-    testCourse(&ifCatalog, "MT2002");
-
-    if (loadStudentHistory(IF_HISTORY_PATH, &ifHistory, &ifCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo cargar el historial de Ingenieria Fisica\n");
-        return 1;
-    }
-
-    // Pruebas para monitorear el correcto funcionamiento del codigo
-
-    printHistory(&ifHistory);
-    testScheduleClashEdgeCases();
-    computeEligibility(&ifCatalog, &ifHistory);
-    testEligibility(&ifCatalog, &ifHistory);
-    computeEligibility(&ceCatalog, &ceHistory);
-    testEligibility(&ceCatalog, &ceHistory);
-
-    int ceCycleCount = detectCycles(&ceCatalog, ceReport);
-    printCycles(&ceCatalog, ceReport, ceCycleCount);
-    int ifCycleCount = detectCycles(&ifCatalog, ifReport);
-    printCycles(&ifCatalog, ifReport, ifCycleCount);
-
-    if (writeCatalogToJSON(CE_OUTPUT_PATH, &ceCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo exportar el catalogo de Computadores\n");
-        return 1;
-    }
-    if (writeCatalogToJSON(IF_OUTPUT_PATH, &ifCatalog) != 0) {
-        fprintf(stderr, "Error: no se pudo exportar el catalogo de Ingenieria Fisica\n");
-        return 1;
-    }
-
-    printf("Se completo la creacion de los JSONs: %s y %s\n", CE_OUTPUT_PATH, IF_OUTPUT_PATH);
+    printf("=== Catalogo cargado ===\n\n");
+    processCarrera(catalogPath, historyPath, outputPath, careerName);
 
     return 0;
 }
