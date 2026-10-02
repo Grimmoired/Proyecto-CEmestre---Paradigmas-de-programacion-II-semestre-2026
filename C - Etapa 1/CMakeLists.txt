@@ -1,4 +1,4 @@
- cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5)
 project(Cemestre C)
 
  add_compile_definitions(PROJECT_ROOT_PATH="${CMAKE_SOURCE_DIR}/")

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Cemestre" targetName="Cemestre" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Se extendio el soporte de los catalogos de carrera a 6 semestres para cumplir con los requerimientos de la etapa 2, tambien se agrego el nombre de la carrera a la que pertenece el curso guardado como uno de sus atributos">
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/Requisites.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/Requisites.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/catalogLoader.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/catalogLoader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/constants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/outputWriter.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/outputWriter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/scheduleClash.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/scheduleClash.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/studentLoader.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/studentLoader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C - Etapa 1/types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Cemestre.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-CEmestre---Paradigmas-de-programacion-II-semestre-2026.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlanEstudioCE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PlanEstudioCE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Requisites.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Requisites.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogLoader.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogLoader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputWriter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputWriter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduleClash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduleClash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentLoader.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentLoader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.h" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Grimmoired&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Grimmoired/Proyecto-CEmestre---Paradigmas-de-programacion-II-semestre-2026.git&quot;,
+    &quot;accountId&quot;: &quot;59e9027d-ddde-4aa3-aedb-b4a1add19d77&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="pw02EECM" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3JQm8x4ee2Asga2XNY8mD06isQ7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.Cemestre.executor": "Run",
+    "CMake Application.TestScheduleClash.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cemestre" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cemestre" TARGET_NAME="Cemestre" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Cemestre" RUN_TARGET_NAME="Cemestre">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="" />
+      <created>1789601513852</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789601513852</updated>
+      <workItem from="1789601516041" duration="2673000" />
+      <workItem from="1789604227343" duration="107000" />
+      <workItem from="1789604349064" duration="1789000" />
+      <workItem from="1790044053798" duration="4242000" />
+      <workItem from="1790118005640" duration="5682000" />
+      <workItem from="1790132134873" duration="3924000" />
+      <workItem from="1790202617998" duration="6561000" />
+      <workItem from="1790380186718" duration="17718000" />
+      <workItem from="1790435754275" duration="5792000" />
+      <workItem from="1790865322107" duration="3075000" />
+      <workItem from="1790896117111" duration="5303000" />
+      <workItem from="1790907575249" duration="201000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implementacion del detector de choques de horario, con sus respectivos casos de prueba. (implementacion hecha por el compañero jorge porras en la branch de &quot;development&quot;, yo solo me encargue de revisarla y hacer el commit a main).">
+      <option name="closed" value="true" />
+      <created>1789604586339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789604586339</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se agrego un nuevo atributo de genero a los historiales de estudiante, para mantener consistencia entre el nombre del estudiante y la forma en la que el programa se refiere a estos (El estudiante, La estudiante)">
+      <option name="closed" value="true" />
+      <created>1790046711410</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790046711410</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se modifico el limite de grupos por curso a 5 para cumplir con una especificacion que el profe hizo recientementente.">
+      <option name="closed" value="true" />
+      <created>1790131995246</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1790131995246</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se extendio el soporte de los catalogos de carrera a 6 semestres para cumplir con los requerimientos de la etapa 2, tambien se agrego el nombre de la carrera a la que pertenece el curso guardado como uno de sus atributos">
+      <option name="closed" value="true" />
+      <created>1790873242194</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1790873242195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementacion del detector de choques de horario, con sus respectivos casos de prueba. (implementacion hecha por el compañero jorge porras en la branch de &quot;development&quot;, yo solo me encargue de revisarla y hacer el commit a main)." />
+    <MESSAGE value="Se agrego un nuevo atributo de genero a los historiales de estudiante, para mantener consistencia entre el nombre del estudiante y la forma en la que el programa se refiere a estos (El estudiante, La estudiante)" />
+    <MESSAGE value="Se modifico el limite de grupos por curso a 5 para cumplir con una especificacion que el profe hizo recientementente." />
+    <MESSAGE value="Se extendio el soporte de los catalogos de carrera a 6 semestres para cumplir con los requerimientos de la etapa 2, tambien se agrego el nombre de la carrera a la que pertenece el curso guardado como uno de sus atributos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se extendio el soporte de los catalogos de carrera a 6 semestres para cumplir con los requerimientos de la etapa 2, tambien se agrego el nombre de la carrera a la que pertenece el curso guardado como uno de sus atributos" />
+  </component>
+</project>
