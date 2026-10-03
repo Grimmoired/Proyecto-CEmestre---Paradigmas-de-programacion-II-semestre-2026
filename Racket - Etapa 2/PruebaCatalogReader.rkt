@@ -2,8 +2,8 @@
 
 ;; test-catalog-reader.rkt
 
-(require "types.rkt"
-         "catalog-reader.rkt")
+(require "Types.rkt"
+         "CatalogReader.rkt")
 
 (define total-tests 0)
 (define passed-tests 0)
