@@ -26,12 +26,11 @@ static void writeStringArray(FILE *f, const char arr[][maxCourseCodeLen], int co
     fprintf(f, "]");
 }
 
-static void writeCourse(FILE *f, const Course *c, const char *careerName) {
+static void writeCourse(FILE *f, const Course *c) {
     fprintf(f, "{\n");
     fprintf(f, "  \"courseCode\": \"%s\",\n", c->courseCode);
     fprintf(f, "  \"courseName\": \"%s\",\n", c->courseName);
     fprintf(f, "  \"credits\": %d,\n", c->credits);
-    fprintf(f, "  \"carrera\": \"%s\",\n", careerName);
     fprintf(f, "  \"requisites\": ");
     writeStringArray(f, c->requisites, c->requisiteCount);
     fprintf(f, ",\n");
@@ -57,10 +56,12 @@ int writeCatalogToJSON(const char *filePath, const Catalog *catalog, const char 
         fprintf(stderr, "Error: no se pudo abrir el archivo de salida %s\n", filePath);
         return -1;
     }
-    fprintf(f, "{\n  \"courses\": [\n");
+    fprintf(f, "{\n");
+    fprintf(f, "  \"carrera\": \"%s\",\n", careerName);
+    fprintf(f, "  \"courses\": [\n");
     for (int i = 0; i < catalog->courseCount; i++) {
         if (i > 0) fprintf(f, ",\n");
-        writeCourse(f, &catalog->courses[i], careerName);
+        writeCourse(f, &catalog->courses[i]);
     }
     fprintf(f, "\n  ]\n}\n");
     fclose(f);

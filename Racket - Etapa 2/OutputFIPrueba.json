@@ -1,0 +1,18 @@
+{
+  "carrera": "Ingenieria Fisica",
+  "courses": [
+{
+  "courseCode": "CA2125",
+  "courseName": "Elementos de Computacion",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1900", "endTime": "2050"}, {"day": "MAR", "startTime": "1900", "endTime": "2050"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+}
+  ]
+}

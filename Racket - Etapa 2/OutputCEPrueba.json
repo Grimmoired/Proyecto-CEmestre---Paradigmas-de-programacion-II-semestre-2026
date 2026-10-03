@@ -1,0 +1,59 @@
+{
+  "carrera": "Ingenieria en Computadores",
+  "courses": [
+{
+  "courseCode": "CE1101",
+  "courseName": "Introduccion a la Programacion",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1104",
+  "courseName": "Fundamentos de Sistemas Computacionales",
+  "credits": 3,
+  "requisites": [],
+  "corequisites": ["CE1101"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "MA1403",
+  "courseName": "Matematica Discreta",
+  "credits": 4,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0730", "endTime": "0920"}, {"day": "VIE", "startTime": "0730", "endTime": "0920"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CI0205",
+  "courseName": "Prueba avanzada de ingles",
+  "credits": 0,
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": true,
+  "hasCycle": false
+}
+  ]
+}
