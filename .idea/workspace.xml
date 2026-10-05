@@ -27,10 +27,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Se refactorizo la estructura del proyecto para separar las etapas en subcarpetas, cada lenguaje de paradigma utilizado tendra su codigo dentro de su respectiva carpeta">
+    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Correccion de typo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C - Etapa 1/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/constants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C - Etapa 1/outputWriter.c" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/outputWriter.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,24 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Development" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -100,11 +116,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -125,7 +136,9 @@
       <workItem from="1790865322107" duration="3075000" />
       <workItem from="1790896117111" duration="5303000" />
       <workItem from="1790907575249" duration="2436000" />
-      <workItem from="1791063718951" duration="1050000" />
+      <workItem from="1791063718951" duration="3800000" />
+      <workItem from="1791067561579" duration="1459000" />
+      <workItem from="1791166539534" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion del detector de choques de horario, con sus respectivos casos de prueba. (implementacion hecha por el compañero jorge porras en la branch de &quot;development&quot;, yo solo me encargue de revisarla y hacer el commit a main).">
       <option name="closed" value="true" />
@@ -167,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1790908090938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se modifico el ouput para que este especifique la carrera a la que pertenece el archivo de salida; se introdujo una prueba temprana del sistema de lectura de archivos de Output de la etapa 1 con Racket, asi como un archivo de types en el que se definen los structs que se planean usar a futuro">
+      <option name="closed" value="true" />
+      <created>1791065264757</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1791065264757</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Correccion de tipo">
+      <option name="closed" value="true" />
+      <created>1791068379998</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1791068379999</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +225,8 @@
     <MESSAGE value="Se modifico el limite de grupos por curso a 5 para cumplir con una especificacion que el profe hizo recientementente." />
     <MESSAGE value="Se extendio el soporte de los catalogos de carrera a 6 semestres para cumplir con los requerimientos de la etapa 2, tambien se agrego el nombre de la carrera a la que pertenece el curso guardado como uno de sus atributos" />
     <MESSAGE value="Se refactorizo la estructura del proyecto para separar las etapas en subcarpetas, cada lenguaje de paradigma utilizado tendra su codigo dentro de su respectiva carpeta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se refactorizo la estructura del proyecto para separar las etapas en subcarpetas, cada lenguaje de paradigma utilizado tendra su codigo dentro de su respectiva carpeta" />
+    <MESSAGE value="Se modifico el ouput para que este especifique la carrera a la que pertenece el archivo de salida; se introdujo una prueba temprana del sistema de lectura de archivos de Output de la etapa 1 con Racket, asi como un archivo de types en el que se definen los structs que se planean usar a futuro" />
+    <MESSAGE value="Correccion de tipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion de tipo" />
   </component>
 </project>
