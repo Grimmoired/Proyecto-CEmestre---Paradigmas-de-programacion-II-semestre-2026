@@ -5,7 +5,9 @@
  (struct-out schedule-block)
  (struct-out course-group)
  (struct-out course)
- (struct-out preference))
+ (struct-out preference)
+ (struct-out selection)
+ (struct-out combination))
 
 (struct/contract schedule-block
   ([day string?]
@@ -36,4 +38,15 @@
   ([credits-min exact-nonnegative-integer?]
    [credits-max exact-nonnegative-integer?]
    [interests (listof (cons/c string? (listof string?)))])
+  #:transparent)
+
+;; Un par curso-grupo elegido, por ejemplo ("CE1101" . "2")
+(struct/contract selection
+  ([course-code string?]
+   [group-id string?])
+  #:transparent)
+
+;; Una combinacion de horario: un grupo por cada curso de interes
+(struct/contract combination
+  ([selections (listof selection?)])
   #:transparent)
