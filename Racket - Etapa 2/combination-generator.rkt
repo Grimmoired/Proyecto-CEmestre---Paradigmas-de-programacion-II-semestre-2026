@@ -1,6 +1,5 @@
 #lang racket/base
 
-
 (require racket/contract
          racket/list
          racket/stream
@@ -10,16 +9,12 @@
          blocks-clash?
          groups-clash?)
 
-;; Un candidato es un par (codigo-del-curso . grupo)
+;; Los candidatos son pares codigo-grupo
 (define candidate/c (cons/c string? course-group?))
-
-
-
 
 (define/contract (time->number t)
   (-> string? exact-nonnegative-integer?)
   (string->number t))
-
 
 (define/contract (blocks-clash? a b)
   (-> schedule-block? schedule-block? boolean?)
@@ -31,11 +26,9 @@
        (< start-a end-b)
        (< start-b end-a)))
 
-
 (define/contract (block-clashes-with-any? block blocks)
   (-> schedule-block? (listof schedule-block?) boolean?)
   (ormap (lambda (other) (blocks-clash? block other)) blocks))
-
 
 (define/contract (groups-clash? g1 g2)
   (-> course-group? course-group? boolean?)
@@ -43,19 +36,14 @@
   (ormap (lambda (block) (block-clashes-with-any? block blocks-2))
          (course-group-blocks g1)))
 
-
 (define/contract (clashes-with-chosen? group chosen)
   (-> course-group? (listof candidate/c) boolean?)
   (ormap (lambda (candidate) (groups-clash? group (cdr candidate)))
          chosen))
 
-
-
-
 (define/contract (find-course code courses)
   (-> string? (listof course?) (or/c course? #f))
   (findf (lambda (c) (string=? (course-course-code c) code)) courses))
-
 
 (define/contract (interest->candidates interest courses)
   (-> (cons/c string? (listof string?)) (listof course?)
@@ -76,14 +64,10 @@
        [(null? wanted-groups) #f]
        [else (map (lambda (g) (cons code g)) wanted-groups)])]))
 
-
 (define/contract (build-candidate-lists prefs courses)
   (-> preference? (listof course?) (listof (listof candidate/c)))
   (filter-map (lambda (interest) (interest->candidates interest courses))
               (preference-interests prefs)))
-
-
-
 
 (define/contract (stream-append-lazy first-stream make-second-stream)
   (-> stream? (-> stream?) stream?)
@@ -94,9 +78,6 @@
                   (stream-append-lazy (stream-rest first-stream)
                                       make-second-stream))]))
 
-
-
-
 (define/contract (chosen->combination chosen)
   (-> (listof candidate/c) combination?)
   (combination
@@ -106,14 +87,11 @@
                       (course-group-group-id (cdr candidate))))
          chosen))))
 
-
 (define/contract (search remaining chosen)
   (-> (listof (listof candidate/c)) (listof candidate/c) stream?)
   (cond
-    ;; elige un grupo para cada curso: esta combinacion esta completa
     [(null? remaining)
      (stream (chosen->combination chosen))]
-    ;; Falta elegir: pruebo los candidatos del siguiente curso
     [else
      (try-candidates (first remaining) (rest remaining) chosen)]))
 
@@ -121,16 +99,13 @@
 (define/contract (try-candidates candidates remaining chosen)
   (-> (listof candidate/c) (listof (listof candidate/c)) (listof candidate/c) stream?)
   (cond
-    ;; No quedan candidatos de este curso: no hay mas combinaciones por aqui
     [(null? candidates) empty-stream]
     [else
      (define candidate (first candidates))
      (define other-candidates (rest candidates))
      (cond
-       
        [(clashes-with-chosen? (cdr candidate) chosen)
         (try-candidates other-candidates remaining chosen)]
-       
        [else
         (stream-append-lazy
          (search remaining (cons candidate chosen))
