@@ -40,13 +40,11 @@
    [interests (listof (cons/c string? (listof string?)))])
   #:transparent)
 
-;; Un par curso-grupo elegido, por ejemplo ("CE1101" . "2")
 (struct/contract selection
   ([course-code string?]
    [group-id string?])
   #:transparent)
 
-;; Una combinacion de horario: un grupo por cada curso de interes
 (struct/contract combination
   ([selections (listof selection?)])
   #:transparent)
