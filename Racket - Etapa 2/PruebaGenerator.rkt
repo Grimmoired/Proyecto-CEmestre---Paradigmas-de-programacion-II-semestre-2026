@@ -4,7 +4,7 @@
          racket/stream
          "Types.rkt"
          "DataLoader.rkt"
-         "combination-generator.rkt")
+         "CombinationGenerator.rkt")
 
 ;; check : string? any/c any/c -> void
 (define (check label actual expected)
@@ -37,7 +37,7 @@
        (blocks-clash? (blk "MAR" "0700" "1200") (blk "MAR" "0800" "0900")) #t)
 
 (newline)
-(displayln "Prueba 2: datos de prueba reales)
+(displayln "Prueba 2: datos de prueba reales")
 (define-values (courses prefs)
   (load-data (list "OutputCEPrueba.json" "OutputFIPrueba.json") "PreferenciasPrueba.rktd"))
 (define combos (stream->list (generate-combinations courses prefs)))
@@ -136,7 +136,7 @@
                                                       (preference 0 100 interes-pruning))))
               '()))
 (check "stream vacio" (first resultado-pruning) #t)
-(printf "   (tardo ~a ms; sin pruning serian ~a ramas)\n" ms-real (expt 6 10))
+(printf "   (tardo ~a ms ); sin pruning serian ~a ramas)\n" ms-real (expt 6 10))
 
 (newline)
 (displayln "Fin de las pruebas.")

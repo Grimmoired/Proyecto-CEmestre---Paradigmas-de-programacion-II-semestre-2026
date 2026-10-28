@@ -27,8 +27,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Correccion de typo">
+    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Eliminar script de prueba desactualizado en preparacion para el pull request">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/CatalogReader.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/CatalogReader.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/OutputCEPrueba.json" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/OutputCEPrueba.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/OutputFIPrueba.json" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/OutputFIPrueba.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/Types.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/Types.rkt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +103,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
@@ -139,6 +146,10 @@
       <workItem from="1791063718951" duration="3800000" />
       <workItem from="1791067561579" duration="1459000" />
       <workItem from="1791166539534" duration="4000" />
+      <workItem from="1792623036394" duration="1619000" />
+      <workItem from="1792626310474" duration="1883000" />
+      <workItem from="1793070409958" duration="1696000" />
+      <workItem from="1793215337539" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion del detector de choques de horario, con sus respectivos casos de prueba. (implementacion hecha por el compañero jorge porras en la branch de &quot;development&quot;, yo solo me encargue de revisarla y hacer el commit a main).">
       <option name="closed" value="true" />
