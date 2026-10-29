@@ -1,0 +1,5 @@
+((credits-min . 20)
+ (credits-max . 25)
+ (interests . (("MA1102" "1" "2")
+               ("CE1103" "1" "2")
+               ("CE1105" "1" "2"))))
