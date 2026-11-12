@@ -1,6 +1,6 @@
 #lang racket/base
 (require racket/contract)
-
+ 
 (provide
  (struct-out schedule-block)
  (struct-out course-group)
@@ -8,19 +8,22 @@
  (struct-out preference)
  (struct-out selection)
  (struct-out combination))
-
+ 
+(define area/c
+  (and/c string? (lambda (s) (positive? (string-length s)))))
+ 
 (struct/contract schedule-block
   ([day string?]
    [start-time string?]
    [end-time string?])
   #:transparent)
-
+ 
 (struct/contract course-group
   ([group-id string?]
    [has-clash boolean?]
    [blocks (listof schedule-block?)])
   #:transparent)
-
+ 
 (struct/contract course
   ([course-code string?]
    [course-name string?]
@@ -31,20 +34,21 @@
    [has-schedule-clash boolean?]
    [can-enroll boolean?]
    [has-cycle boolean?]
-   [career string?])
+   [career string?]
+   [area area/c])
   #:transparent)
-
+ 
 (struct/contract preference
   ([credits-min exact-nonnegative-integer?]
    [credits-max exact-nonnegative-integer?]
    [interests (listof (cons/c string? (listof string?)))])
   #:transparent)
-
+ 
 (struct/contract selection
   ([course-code string?]
    [group-id string?])
   #:transparent)
-
+ 
 (struct/contract combination
   ([selections (listof selection?)])
   #:transparent)

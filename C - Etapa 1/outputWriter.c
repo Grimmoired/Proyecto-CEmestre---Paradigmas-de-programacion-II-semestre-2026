@@ -31,6 +31,7 @@ static void writeCourse(FILE *f, const Course *c) {
     fprintf(f, "  \"courseCode\": \"%s\",\n", c->courseCode);
     fprintf(f, "  \"courseName\": \"%s\",\n", c->courseName);
     fprintf(f, "  \"credits\": %d,\n", c->credits);
+    fprintf(f, "  \"area\": \"%s\",\n", c->area);
     fprintf(f, "  \"requisites\": ");
     writeStringArray(f, c->requisites, c->requisiteCount);
     fprintf(f, ",\n");

@@ -27,7 +27,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Solucion del error en generacion de combinaciones que se encontro en la defensa" />
+    <list default="true" id="35919a22-8a18-4bab-85e7-9c788a74b62f" name="Changes" comment="Solucion del error en generacion de combinaciones que se encontro en la defensa">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/HistorialEstudianteCE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/HistorialEstudianteCE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/HistorialEstudianteFI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/HistorialEstudianteFI.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/PlanEstudioCE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/PlanEstudioCE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/PlanEstudioFI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/PlanEstudioFI.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/catalogLoader.c" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/catalogLoader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/outputWriter.c" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/outputWriter.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C - Etapa 1/types.h" beforeDir="false" afterPath="$PROJECT_DIR$/C - Etapa 1/types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/CatalogReader.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/CatalogReader.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/OutputCE.json" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/OutputCE.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/OutputFI.json" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/OutputFI.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/OutputWriter.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/OutputWriter.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/PruebaCreditFilter.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/PruebaCreditFilter.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/PruebaDataLoader.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/PruebaDataLoader.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/PruebaGenerator.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/PruebaGenerator.rkt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racket - Etapa 2/Types.rkt" beforeDir="false" afterPath="$PROJECT_DIR$/Racket - Etapa 2/Types.rkt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +156,9 @@
       <workItem from="1791063718951" duration="3800000" />
       <workItem from="1791067561579" duration="1459000" />
       <workItem from="1791166539534" duration="4000" />
+      <workItem from="1794436747627" duration="2552000" />
+      <workItem from="1794457518579" duration="311000" />
+      <workItem from="1794458554791" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion del detector de choques de horario, con sus respectivos casos de prueba. (implementacion hecha por el compañero jorge porras en la branch de &quot;development&quot;, yo solo me encargue de revisarla y hacer el commit a main).">
       <option name="closed" value="true" />
@@ -202,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794284083994</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Solucion del error en generacion de combinaciones que se encontro en la defensa">
+      <option name="closed" value="true" />
+      <created>1794284564787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1794284564787</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,7 +10,7 @@
   (map (lambda (s) (list (selection-course-code s) (selection-group-id s))) (combination-selections c)))
 (define (blk day start end) (schedule-block day start end))
 (define (grp id . blocks) (course-group id #f blocks))
-(define (mk-course code credits . groups) (course code code credits '() '() groups #f #t #f "Prueba"))
+(define (mk-course code credits . groups) (course code code credits '() '() groups #f #t #f "Prueba" "Area"))
 (define (all-pairs courses prefs) (map combination->pairs (stream->list (generate-combinations courses prefs))))
 (define (quiet thunk) (parameterize ([current-error-port (open-output-string)]) (thunk)))
 (define (has-course? pairs code) (and (assoc code pairs) #t))
@@ -45,7 +45,7 @@
 (newline)
 (displayln "Prueba 2: datos reales (CE1101 g1/g2, CE1104 g1, MA1403 g1/g2); CE1101 g1 choca con CE1104 g1")
 (define-values (courses prefs)
-  (load-data (list "OutputCEPrueba.json" "OutputFIPrueba.json") "PreferenciasPrueba.rktd"))
+  (load-data (list "OutputCE.json" "OutputFI.json") "PreferenciasPrueba.rktd"))
 (define real (all-pairs courses prefs))
 (for ([c real]) (printf "  ~a\n" c))
 (check "cantidad: subconjuntos no vacios sin choques" (length real) 14)
@@ -78,7 +78,7 @@
 (newline)
 (displayln "Prueba 5: curso no habilitado y sin cursos de interes")
 (define courses-con-bloqueado
-  (append courses (list (course "XX0000" "Bloqueado" 3 '() '() (list (grp "1" (blk "LUN" "0800" "0950"))) #f #f #f "Prueba"))))
+  (append courses (list (course "XX0000" "Bloqueado" 3 '() '() (list (grp "1" (blk "LUN" "0800" "0950"))) #f #f #f "Prueba" "Area"))))
 (check "el curso con canEnroll=false se omite"
        (quiet (lambda () (all-pairs courses-con-bloqueado (preference 0 20 '(("CE1101" "2") ("XX0000" "1"))))))
        '((("CE1101" "2"))))

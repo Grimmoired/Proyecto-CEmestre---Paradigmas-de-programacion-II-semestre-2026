@@ -41,6 +41,7 @@
           'courseName (course-course-name crs)
           'groupId    (course-group-group-id grp)
           'career     (course-career crs)
+          'area       (course-area crs)
           'credits    (course-credits crs)
           'blocks     (map block->jsexpr (course-group-blocks grp))))
 
