@@ -1,0 +1,114 @@
+{
+ "creditsMin": 0,
+ "creditsMax": 12,
+ "combinations": [
+  {
+   "id": 1,
+   "selections": [
+    {
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "CI3203",
+     "courseName": "X",
+     "credits": 2,
+     "groupId": "1"
+    },
+    {
+     "area": "Matematicas",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "PI2609",
+     "courseName": "X",
+     "credits": 2,
+     "groupId": "1"
+    },
+    {
+     "area": "Ciencias naturales",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "QU1107",
+     "courseName": "X",
+     "credits": 3,
+     "groupId": "1"
+    },
+    {
+     "area": "Ciencias naturales",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "QU1104",
+     "courseName": "X",
+     "credits": 1,
+     "groupId": "1"
+    }
+   ],
+   "totalCredits": 8
+  },
+  {
+   "id": 2,
+   "selections": [
+    {
+     "area": "Cultural-Deportiva",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "SE1100",
+     "courseName": "X",
+     "credits": 0,
+     "groupId": "SE1101_1"
+    }
+   ],
+   "totalCredits": 0
+  },
+  {
+   "id": 3,
+   "selections": [
+    {
+     "area": "Ingenieria",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "MI2101",
+     "courseName": "X",
+     "credits": 3,
+     "groupId": "2"
+    }
+   ],
+   "totalCredits": 3
+  }
+ ],
+ "combinationCount": 3
+}
