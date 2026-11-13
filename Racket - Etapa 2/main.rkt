@@ -7,7 +7,8 @@
          "OutputWriter.rkt")
 
 (define-runtime-path default-ce-catalog   "OutputCE.json")
-(define-runtime-path default-preferences  "PreferenciasCE.rktd")
+(define-runtime-path default-fi-catalog   "OutputFI.json")
+(define-runtime-path default-preferences  "PreferenciasAmbasCarreras.rktd")
 (define-runtime-path default-output       "CombinacionesSalida.json")
 
 (define (parse-args args)
@@ -40,5 +41,5 @@
     (define-values (prefs-arg catalogs-arg out-arg)
       (parse-args (vector->list (current-command-line-arguments))))
     (void (run (or prefs-arg default-preferences)
-               (if (null? catalogs-arg) (list default-ce-catalog) catalogs-arg)
+               (if (null? catalogs-arg) (list default-ce-catalog default-fi-catalog) catalogs-arg)
                (or out-arg default-output)))))

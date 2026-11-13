@@ -1,0 +1,389 @@
+{
+    "creditsMin": 8,
+    "creditsMax": 12,
+    "combinations": [
+        {
+            "id": 1,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1020",
+                            "startTime": "0730"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "0920",
+                            "startTime": "0730"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "1"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Humanistica",
+                    "blocks": [
+                        {
+                            "day": "LUN",
+                            "endTime": "1220",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CI1407",
+                    "courseName": "Habilidades de Comunicacion en Ingenieria",
+                    "credits": 2,
+                    "groupId": "1"
+                }
+            ],
+            "totalCredits": 10
+        },
+        {
+            "id": 2,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1020",
+                            "startTime": "0730"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "0920",
+                            "startTime": "0730"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "1"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "2"
+                }
+            ],
+            "totalCredits": 8
+        },
+        {
+            "id": 3,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1850",
+                            "startTime": "1700"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1950",
+                            "startTime": "1700"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "1"
+                },
+                {
+                    "area": "Humanistica",
+                    "blocks": [
+                        {
+                            "day": "LUN",
+                            "endTime": "1220",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CI1407",
+                    "courseName": "Habilidades de Comunicacion en Ingenieria",
+                    "credits": 2,
+                    "groupId": "1"
+                }
+            ],
+            "totalCredits": 10
+        },
+        {
+            "id": 4,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1850",
+                            "startTime": "1700"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1950",
+                            "startTime": "1700"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "1"
+                },
+                {
+                    "area": "Humanistica",
+                    "blocks": [
+                        {
+                            "day": "MAR",
+                            "endTime": "1550",
+                            "startTime": "1300"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CI1407",
+                    "courseName": "Habilidades de Comunicacion en Ingenieria",
+                    "credits": 2,
+                    "groupId": "2"
+                }
+            ],
+            "totalCredits": 10
+        },
+        {
+            "id": 5,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1850",
+                            "startTime": "1700"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1950",
+                            "startTime": "1700"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1120",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "1"
+                }
+            ],
+            "totalCredits": 8
+        },
+        {
+            "id": 6,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1850",
+                            "startTime": "1700"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1950",
+                            "startTime": "1700"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Humanistica",
+                    "blocks": [
+                        {
+                            "day": "LUN",
+                            "endTime": "1220",
+                            "startTime": "0930"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CI1407",
+                    "courseName": "Habilidades de Comunicacion en Ingenieria",
+                    "credits": 2,
+                    "groupId": "1"
+                }
+            ],
+            "totalCredits": 10
+        },
+        {
+            "id": 7,
+            "selections": [
+                {
+                    "area": "Matematicas",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1850",
+                            "startTime": "1700"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1950",
+                            "startTime": "1700"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "MA1102",
+                    "courseName": "Calculo Diferencial e Integral",
+                    "credits": 4,
+                    "groupId": "2"
+                },
+                {
+                    "area": "Programacion",
+                    "blocks": [
+                        {
+                            "day": "JUE",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        },
+                        {
+                            "day": "MAR",
+                            "endTime": "1650",
+                            "startTime": "1500"
+                        }
+                    ],
+                    "career": "Ingenieria en Computadores",
+                    "courseCode": "CE1103",
+                    "courseName": "Algoritmos y Estructuras de Datos I",
+                    "credits": 4,
+                    "groupId": "2"
+                }
+            ],
+            "totalCredits": 8
+        }
+    ],
+    "combinationCount": 7
+}
