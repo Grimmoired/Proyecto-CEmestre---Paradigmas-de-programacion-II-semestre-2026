@@ -7,12 +7,10 @@
 (provide read-preferences
          validate-preferences)
 
-;; raw-interest->interest : (listof string?) -> (cons/c string? (listof string?)).
 (define/contract (raw-interest->interest raw)
   (-> (cons/c string? (listof string?)) (cons/c string? (listof string?)))
   (cons (first raw) (rest raw)))
 
-;; read-preferences : path-string? -> preference?
 (define/contract (read-preferences path)
   (-> path-string? preference?)
   (define data (call-with-input-file path read))
@@ -23,12 +21,10 @@
               credits-max
               (map raw-interest->interest raw-interests)))
 
-;; find-course-by-code : string? (listof course?) -> (or/c course? #f)
 (define/contract (find-course-by-code code courses)
   (-> string? (listof course?) (or/c course? #f))
   (findf (lambda (c) (string=? (course-course-code c) code)) courses))
 
-;; validate-interest : (cons/c string? (listof string?)) (listof course?) -> (or/c (cons/c string? (listof string?)) #f)
 (define/contract (validate-interest interest courses)
   (-> (cons/c string? (listof string?)) (listof course?)
       (or/c (cons/c string? (listof string?)) #f))
@@ -50,7 +46,6 @@
         #f]
        [else (cons code kept-groups)])]))
 
-;; validate-preferences : preference? (listof course?) -> preference?
 (define/contract (validate-preferences prefs courses)
   (-> preference? (listof course?) preference?)
   (preference (preference-credits-min prefs)

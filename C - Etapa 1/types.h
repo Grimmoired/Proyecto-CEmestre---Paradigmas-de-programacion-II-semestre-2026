@@ -24,6 +24,7 @@ typedef struct {
     char courseCode[maxCourseCodeLen];
     char courseName[maxCourseNameLen];
     int credits;
+    char area[maxAreaLen];
     CourseGroup groups[maxGroupsPerCourse];
     int groupCount;
     char requisites[maxRequisites][maxCourseCodeLen];

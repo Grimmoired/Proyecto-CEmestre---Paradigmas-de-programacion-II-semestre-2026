@@ -7,7 +7,6 @@
 
 (provide load-data)
 
-;; load-data : (listof path-string?) path-string? -> (values (listof course?) preference?)
 (define/contract (load-data catalog-paths preferences-path)
   (-> (listof path-string?) path-string? (values (listof course?) preference?))
   (define courses (read-catalog catalog-paths))

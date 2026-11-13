@@ -10,7 +10,6 @@
          credits-in-range?
          filter-by-credits)
  
-;; filter-stream : (All (A) (-> (-> A Boolean) (Streamof A) (Streamof A)))
 (define/contract (filter-stream pred s)
   (-> (-> any/c boolean?) stream? stream?)
   (let loop ([s s])
@@ -22,7 +21,6 @@
            (stream-cons x (loop (stream-rest s)))
            (loop (stream-rest s)))])))
  
-;; credit-table : (listof course?) -> (hash/c string? exact-nonnegative-integer?)
 (define/contract (credit-table courses)
   (-> (listof course?) (hash/c string? exact-nonnegative-integer?))
   (for/hash ([c courses])
@@ -40,13 +38,10 @@
          0
          (combination-selections comb)))
  
-;; combination-credits : combination? (listof course?) -> exact-nonnegative-integer?
 (define/contract (combination-credits comb courses)
   (-> combination? (listof course?) exact-nonnegative-integer?)
   (combination-credits/table comb (credit-table courses)))
  
-;; credits-in-range? : lo hi courses -> (combination? -> boolean?)
-;; Devuelve un predicado.
 (define/contract (credits-in-range? lo hi courses)
   (-> exact-nonnegative-integer? exact-nonnegative-integer? (listof course?)
       (-> combination? boolean?))
@@ -55,7 +50,6 @@
     (define total (combination-credits/table comb table))
     (and (>= total lo) (<= total hi))))
  
-;; filter-by-credits : stream? (listof course?) preference? -> stream?
 (define/contract (filter-by-credits combos courses prefs)
   (-> stream? (listof course?) preference? stream?)
   (define lo (preference-credits-min prefs))

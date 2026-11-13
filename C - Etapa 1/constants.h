@@ -1,4 +1,3 @@
-//
 // Created by Bryan on 8/28/2026.
 //
 
@@ -6,13 +5,14 @@
 #define CONSTANTS_H
 
 #define maxCourses 70
-#define maxGroupsPerCourse 5
+#define maxGroupsPerCourse 25
 #define maxScheduleBlocks 3
 #define maxRequisites 3
 #define maxCorequisites 3
 #define maxCourseCodeLen 8
 #define maxGroupIdLen 10
 #define maxCourseNameLen 80
+#define maxAreaLen 24
 #define maxStudentNameLen 50
 #define maxStudentIdLen 12
 #define maxTimeLen 6
@@ -20,6 +20,14 @@
 #define maxCycles maxCourses*maxRequisites
 #define nombreCarrera1 "Ingenieria en Computadores"
 #define nombreCarrera2 "Ingenieria Fisica"
+#define areaMatematicas "Matematicas"
+#define areaProgramacion "Programacion"
+#define areaComputadores "Computadores"
+#define areaElectronica "Electronica"
+#define areaCienciasNaturales "Ciencias naturales"
+#define areaIngenieria "Ingenieria"
+#define areaHumanistica "Humanistica"
+#define areaCulturalDeportiva "Cultural-Deportiva"
 #define CE_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioCE.txt"
 #define CE_HISTORY_PATH   PROJECT_ROOT_PATH "HistorialEstudianteCE.txt"
 #define IF_CATALOG_PATH   PROJECT_ROOT_PATH "PlanEstudioFI.txt"

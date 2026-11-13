@@ -1,4 +1,5 @@
 #lang racket/base
+
 (require racket/contract
          racket/list
          racket/stream
@@ -8,7 +9,6 @@
          blocks-clash?
          groups-clash?)
 
-;; Los candidatos son pares (codigo-de-curso . grupo)
 (define candidate/c (cons/c string? course-group?))
 (define interest/c (cons/c string? (listof string?)))
 
@@ -36,7 +36,6 @@
   (ormap (lambda (block) (block-clashes-with-any? block blocks-2))
          (course-group-blocks g1)))
 
-;; clashes-with-chosen? : course-group? (listof candidate/c) -> boolean?
 (define/contract (clashes-with-chosen? group chosen)
   (-> course-group? list? boolean?)
   (ormap (lambda (candidate) (groups-clash? group (cdr candidate)))
@@ -46,13 +45,12 @@
   (-> string? (listof course?) (or/c course? #f))
   (findf (lambda (c) (string=? (course-course-code c) code)) courses))
 
-;; merge-interests : (listof interest/c) -> (listof interest/c)
 (define/contract (merge-interests interests)
   (-> (listof interest/c) (listof interest/c))
   (define codes (remove-duplicates (map car interests)))
   (for ([code codes]
         #:when (> (count (lambda (i) (string=? (car i) code)) interests) 1))
-    (eprintf "Advertencia: el curso '~a' aparece repetido en los intereses, se uniran sus grupos\n" code))
+    (eprintf "Advertencia: el curso '~a' aparece repetido en los intereses, se unen sus grupos\n" code))
   (map (lambda (code)
          (cons code
                (remove-duplicates
@@ -69,7 +67,7 @@
      (eprintf "Advertencia: el curso '~a' no existe en el catalogo, se omite\n" code)
      #f]
     [(not (course-can-enroll found))
-     (eprintf "Advertencia: '~a' no es elegible (canEnroll = false), se omite\n" code)
+     (eprintf "Advertencia: '~a' no esta habilitado (canEnroll = false), se omite\n" code)
      #f]
     [else
      (define wanted-groups
@@ -86,7 +84,6 @@
   (filter-map (lambda (interest) (interest->candidates interest courses))
               (merge-interests (preference-interests prefs))))
 
-;; warn-missing-corequisites : (listof (listof candidate/c)) (listof course?) -> void?
 (define/contract (warn-missing-corequisites candidate-lists courses)
   (-> (listof (listof candidate/c)) (listof course?) void?)
   (define codes (map (lambda (cl) (car (first cl))) candidate-lists))
@@ -114,16 +111,18 @@
                       (course-group-group-id (cdr candidate))))
          chosen))))
 
-;; search : (listof (listof candidate/c)) (listof candidate/c) -> stream?
 (define/contract (search remaining chosen)
   (-> list? list? stream?)
   (cond
     [(null? remaining)
-     (stream (chosen->combination chosen))]
+     (if (null? chosen)
+         empty-stream
+         (stream (chosen->combination chosen)))]
     [else
-     (try-candidates (first remaining) (rest remaining) chosen)]))
+     (stream-append-lazy
+      (try-candidates (first remaining) (rest remaining) chosen)
+      (lambda () (search (rest remaining) chosen)))]))
 
-;; try-candidates : (listof candidate/c) (listof (listof candidate/c)) (listof candidate/c) -> stream?
 (define/contract (try-candidates candidates remaining chosen)
   (-> list? list? list? stream?)
   (cond
@@ -139,7 +138,6 @@
          (search remaining (cons candidate chosen))
          (lambda () (try-candidates other-candidates remaining chosen)))])]))
 
-;; generate-combinations : (listof course?) preference? -> (streamof combination?)
 (define/contract (generate-combinations courses prefs)
   (-> (listof course?) preference? stream?)
   (define candidate-lists (build-candidate-lists prefs courses))

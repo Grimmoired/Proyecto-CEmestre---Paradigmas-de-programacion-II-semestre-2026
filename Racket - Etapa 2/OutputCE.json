@@ -5,6 +5,7 @@
   "courseCode": "CI0205",
   "courseName": "Prueba avanzada de ingles",
   "credits": 0,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -18,6 +19,7 @@
   "courseCode": "MA0101",
   "courseName": "Matematica general",
   "credits": 2,
+  "area": "Matematicas",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -35,6 +37,7 @@
   "courseCode": "CE1101",
   "courseName": "Introduccion a la Programacion",
   "credits": 3,
+  "area": "Programacion",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -42,26 +45,28 @@
     {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "CE1104",
   "courseName": "Fundamentos de Sistemas Computacionales",
   "credits": 3,
+  "area": "Computadores",
   "requisites": [],
   "corequisites": ["CE1101"],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "MA1102",
   "courseName": "Calculo Diferencial e Integral",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA0101"],
   "corequisites": [],
   "groups": [
@@ -78,6 +83,7 @@
   "courseCode": "MA1403",
   "courseName": "Matematica Discreta",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -88,13 +94,14 @@
     {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1800", "endTime": "1950"}, {"day": "MAR", "startTime": "1800", "endTime": "1950"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "QU1102",
   "courseName": "Laboratorio de Quimica Basica I",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["QU1106"],
   "groups": [
@@ -112,6 +119,7 @@
   "courseCode": "QU1106",
   "courseName": "Quimica Basica I",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["QU1102"],
   "groups": [
@@ -129,12 +137,13 @@
   "courseCode": "SE1100",
   "courseName": "Actividad Cultural I",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
     {"groupId": "SE1101_1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0930", "endTime": "1120"}]},
     {"groupId": "SE1101_2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1700", "endTime": "1850"}]},
-    {"groupId": "SE1102_1", "hasClash": false, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "1950"}]},
+    {"groupId": "SE1102_1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "1950"}]},
     {"groupId": "SE1102_2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0930", "endTime": "1120"}]},
     {"groupId": "SE1102_3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}]}
   ],
@@ -146,6 +155,7 @@
   "courseCode": "SE1200",
   "courseName": "Actividad Deportiva I",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -163,6 +173,7 @@
   "courseCode": "CE1103",
   "courseName": "Algoritmos y Estructuras de Datos I",
   "credits": 4,
+  "area": "Programacion",
   "requisites": ["CE1101", "CE1104", "MA1403"],
   "corequisites": [],
   "groups": [
@@ -178,6 +189,7 @@
   "courseCode": "CE1105",
   "courseName": "Principios de Modelado en Ingenieria",
   "credits": 3,
+  "area": "Matematicas",
   "requisites": ["CE1104"],
   "corequisites": [],
   "groups": [
@@ -186,13 +198,14 @@
     {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "1850"}, {"day": "VIE", "startTime": "1700", "endTime": "1850"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": true,
+  "canEnroll": false,
   "hasCycle": false
 },
 {
   "courseCode": "CI1407",
   "courseName": "Habilidades de Comunicacion en Ingenieria",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -209,6 +222,7 @@
   "courseCode": "CS1502",
   "courseName": "Introduccion a la Tecnica, Ciencia y Tecnologia",
   "credits": 1,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -225,6 +239,7 @@
   "courseCode": "FI1101",
   "courseName": "Fisica General I",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["MA1102"],
   "corequisites": [],
   "groups": [
@@ -242,6 +257,7 @@
   "courseCode": "FI1201",
   "courseName": "Laboratorio de Fisica General I",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["FI1101"],
   "groups": [
@@ -259,6 +275,7 @@
   "courseCode": "MA1103",
   "courseName": "Calculo y Algebra Lineal",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1102"],
   "corequisites": [],
   "groups": [
@@ -276,6 +293,7 @@
   "courseCode": "SE1400",
   "courseName": "Actividad Cultural-Deportiva",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -289,6 +307,7 @@
   "courseCode": "CE2103",
   "courseName": "Algoritmos y Estructuras de Datos II",
   "credits": 4,
+  "area": "Programacion",
   "requisites": ["CE1103", "CE1105"],
   "corequisites": [],
   "groups": [
@@ -302,6 +321,7 @@
   "courseCode": "CS2101",
   "courseName": "Ambiente Humano",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -319,6 +339,7 @@
   "courseCode": "EL2113",
   "courseName": "Circuitos Electricos en Corriente Continua",
   "credits": 4,
+  "area": "Electronica",
   "requisites": ["FI1101", "MA1102"],
   "corequisites": [],
   "groups": [
@@ -335,6 +356,7 @@
   "courseCode": "FH1000",
   "courseName": "Centros de Formacion Humanistica",
   "credits": 0,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -348,6 +370,7 @@
   "courseCode": "FI1102",
   "courseName": "Fisica General II",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI1101"],
   "corequisites": ["MA1102"],
   "groups": [
@@ -365,6 +388,7 @@
   "courseCode": "FI1202",
   "courseName": "Laboratorio de Fisica General II",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": ["FI1201"],
   "corequisites": ["FI1102"],
   "groups": [
@@ -382,6 +406,7 @@
   "courseCode": "MA2104",
   "courseName": "Calculo Superior",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1103"],
   "corequisites": [],
   "groups": [
@@ -399,6 +424,7 @@
   "courseCode": "CE1106",
   "courseName": "Paradigmas de Programacion",
   "credits": 3,
+  "area": "Programacion",
   "requisites": ["CE2103"],
   "corequisites": [],
   "groups": [
@@ -413,6 +439,7 @@
   "courseCode": "CE2201",
   "courseName": "Laboratorio de Circuitos Electricos",
   "credits": 1,
+  "area": "Electronica",
   "requisites": ["FI1202"],
   "corequisites": [],
   "groups": [
@@ -427,6 +454,7 @@
   "courseCode": "EL2114",
   "courseName": "Circuitos Electricos en Corriente Alterna",
   "credits": 4,
+  "area": "Electronica",
   "requisites": ["EL2113"],
   "corequisites": ["EL2207"],
   "groups": [
@@ -443,6 +471,7 @@
   "courseCode": "EL2207",
   "courseName": "Elementos Activos",
   "credits": 4,
+  "area": "Electronica",
   "requisites": ["EL2113"],
   "corequisites": [],
   "groups": [
@@ -459,6 +488,7 @@
   "courseCode": "PI2609",
   "courseName": "Probabilidad y Estadistica",
   "credits": 2,
+  "area": "Matematicas",
   "requisites": ["MA2104"],
   "corequisites": [],
   "groups": [
@@ -467,13 +497,14 @@
     {"groupId": "3", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "1020"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "SO4604",
   "courseName": "Seguridad y Salud Ocupacional",
   "credits": 3,
+  "area": "Ingenieria",
   "requisites": ["FI1102"],
   "corequisites": [],
   "groups": [
@@ -491,19 +522,21 @@
   "courseCode": "CE1107",
   "courseName": "Fundamentos de Arquitectura de Computadores",
   "credits": 4,
+  "area": "Computadores",
   "requisites": ["EL2207"],
   "corequisites": [],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "CE3101",
   "courseName": "Bases de Datos",
   "credits": 4,
+  "area": "Programacion",
   "requisites": ["CE1106"],
   "corequisites": [],
   "groups": [
@@ -517,6 +550,7 @@
   "courseCode": "CE3201",
   "courseName": "Taller de Diseno Digital",
   "credits": 2,
+  "area": "Computadores",
   "requisites": ["CE2201"],
   "corequisites": ["CE1107"],
   "groups": [
@@ -524,13 +558,14 @@
     {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1450"}, {"day": "SAB", "startTime": "1030", "endTime": "1220"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "MA2105",
   "courseName": "Ecuaciones Diferenciales",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1103"],
   "corequisites": [],
   "groups": [
@@ -548,6 +583,7 @@
   "courseCode": "PI5516",
   "courseName": "Ingenieria Economica",
   "credits": 3,
+  "area": "Ingenieria",
   "requisites": ["PI2609"],
   "corequisites": [],
   "groups": [
@@ -562,6 +598,7 @@
   "courseCode": "CE1108",
   "courseName": "Compiladores e Interpretes",
   "credits": 4,
+  "area": "Programacion",
   "requisites": ["CE1107"],
   "corequisites": ["CE4301"],
   "groups": [
@@ -575,32 +612,35 @@
   "courseCode": "CE1109",
   "courseName": "Circuitos Analogicos",
   "credits": 4,
+  "area": "Electronica",
   "requisites": ["EL2207", "SO4604"],
   "corequisites": [],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "CE1110",
   "courseName": "Analisis de Senales Mixtas",
   "credits": 4,
+  "area": "Electronica",
   "requisites": ["EL2114", "MA2105"],
   "corequisites": [],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}, {"day": "VIE", "startTime": "0930", "endTime": "1120"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "CE4301",
   "courseName": "Arquitectura de Computadores I",
   "credits": 4,
+  "area": "Computadores",
   "requisites": ["CE1107", "CE3201"],
   "corequisites": [],
   "groups": [
@@ -614,6 +654,7 @@
   "courseCode": "CI3203",
   "courseName": "Ingles Especializado para Ingenierias en Computadores",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": ["CI0205"],
   "corequisites": [],
   "groups": [
@@ -621,6 +662,155 @@
   ],
   "hasScheduleClash": true,
   "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1111",
+  "courseName": "Analisis Numerico para la Ingenieria",
+  "credits": 3,
+  "area": "Matematicas",
+  "requisites": ["MA2105"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1112",
+  "courseName": "Taller de Senales Mixtas",
+  "credits": 3,
+  "area": "Electronica",
+  "requisites": ["CE1109", "CE1110"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1116",
+  "courseName": "Diseno y Calidad en Productos Tecnologicos",
+  "credits": 4,
+  "area": "Ingenieria",
+  "requisites": ["CE3101", "CE4301", "PI5516"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1900", "endTime": "2050"}, {"day": "MAR", "startTime": "1900", "endTime": "2050"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE4302",
+  "courseName": "Arquitectura de Computadores II",
+  "credits": 4,
+  "area": "Computadores",
+  "requisites": ["CE4301"],
+  "corequisites": ["CE4303"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1300", "endTime": "1450"}, {"day": "VIE", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE4303",
+  "courseName": "Principios de Sistemas Operativos",
+  "credits": 4,
+  "area": "Computadores",
+  "requisites": ["CE1108"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "AE4208",
+  "courseName": "Desarrollo de Emprendedores",
+  "credits": 4,
+  "area": "Ingenieria",
+  "requisites": ["CS2101"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1700", "endTime": "2050"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "2050"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1700", "endTime": "2050"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "1120"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "2050"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE1113",
+  "courseName": "Sistemas Empotrados",
+  "credits": 3,
+  "area": "Computadores",
+  "requisites": ["CE4303"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1650"}, {"day": "MAR", "startTime": "1500", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE5301",
+  "courseName": "Redes de Computadores",
+  "credits": 4,
+  "area": "Computadores",
+  "requisites": ["CE1116", "CE4303"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CE5701",
+  "courseName": "Electiva I",
+  "credits": 3,
+  "area": "Computadores",
+  "requisites": ["CE4302", "CI3203"],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "CS3404",
+  "courseName": "Seminario de Etica para la Ingenieria",
+  "credits": 2,
+  "area": "Humanistica",
+  "requisites": ["CS2101"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1800", "endTime": "2050"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
   "hasCycle": false
 }
   ]

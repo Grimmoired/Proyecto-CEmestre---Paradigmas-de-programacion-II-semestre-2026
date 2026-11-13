@@ -147,8 +147,8 @@ void processCarrera(const char *catalogPath, const char *historyPath, const char
 int main(int argc, char *argv[]) {
     setvbuf(stdout, NULL, _IOLBF, 0);
 
-    const char *catalogPath = (argc > 1) ? argv[1] : CE_CATALOG_PATH;
-    const char *historyPath = (argc > 2) ? argv[2] : CE_HISTORY_PATH;
+    const char *catalogPath = (argc > 1) ? argv[1] : IF_CATALOG_PATH;
+    const char *historyPath = (argc > 2) ? argv[2] : IF_HISTORY_PATH;
     const char *outputPath  = (argc > 3) ? argv[3] : OUTPUT_PATH;
     const char *careerName  = (argc > 4) ? argv[4] : nombreCarrera1;
 

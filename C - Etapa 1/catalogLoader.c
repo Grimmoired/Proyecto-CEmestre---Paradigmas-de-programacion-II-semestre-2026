@@ -11,6 +11,18 @@
 #include "constants.h"
 #include "catalogLoader.h"
 
+static const char *const validAreas[] = {
+    areaMatematicas, areaProgramacion, areaComputadores, areaElectronica,
+    areaCienciasNaturales, areaIngenieria, areaHumanistica, areaCulturalDeportiva
+};
+
+static bool isValidArea(const char *area) {
+    for (size_t i = 0; i < sizeof(validAreas) / sizeof(validAreas[0]); i++) {
+        if (strcmp(validAreas[i], area) == 0) return true;
+    }
+    return false;
+}
+
 bool charPrefix(const char *prefix, const char *str) {
     size_t len = strlen(prefix);
     return strncmp(prefix, str, len) == 0;
@@ -138,6 +150,16 @@ int loadCatalog(const char *filePath, Catalog *catalog) {
             while (*value == ' ') value++;
             tempCourse.credits = atoi(value);
         }
+        else if (charPrefix("AREA:", line)) {
+            char *value = line + strlen("AREA:");
+            while (*value == ' ') value++;
+            if (strlen(value) > maxAreaLen - 1) {
+                fprintf(stderr, "Advertencia: area '%s' del curso '%s' excede maxAreaLen (%d), se trunco\n",
+                        value, tempCourse.courseCode, maxAreaLen - 1);
+            }
+            strncpy(tempCourse.area, value, maxAreaLen - 1);
+            tempCourse.area[maxAreaLen - 1] = '\0';
+        }
         else if (charPrefix("REQUISITOS:", line)) {
             char *value = line + strlen("REQUISITOS:");
             while (*value == ' ') value++;
@@ -154,6 +176,13 @@ int loadCatalog(const char *filePath, Catalog *catalog) {
             tempCourse.groupCount = parseGroupsField(value, tempCourse.groups, maxGroupsPerCourse);
         }
         else if (charPrefix("###", line)) {
+            if (tempCourse.area[0] == '\0') {
+                fprintf(stderr, "Advertencia: el curso '%s' no tiene AREA (campo obligatorio)\n",
+                        tempCourse.courseCode);
+            } else if (!isValidArea(tempCourse.area)) {
+                fprintf(stderr, "Advertencia: el area '%s' del curso '%s' no es una de las areas validas\n",
+                        tempCourse.area, tempCourse.courseCode);
+            }
             if (catalog->courseCount >= maxCourses) {
                 fprintf(stderr, "Advertencia: se alcanzo maxCourses (%d), curso '%s' descartado\n",
                         maxCourses, tempCourse.courseCode);

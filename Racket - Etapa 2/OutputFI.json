@@ -1,10 +1,11 @@
 {
-  "carrera": "Ingenieria Fisica",
+  "carrera": "Ingenieria en Computadores",
   "courses": [
 {
   "courseCode": "CI0200",
   "courseName": "Examen Diagnostico",
   "credits": 0,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -18,6 +19,7 @@
   "courseCode": "CI0202",
   "courseName": "Ingles Basico",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -35,6 +37,7 @@
   "courseCode": "CI1106",
   "courseName": "Comunicacion Escrita",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -52,6 +55,7 @@
   "courseCode": "CI1230",
   "courseName": "Ingles I",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": ["CI0200", "CI0202"],
   "corequisites": [],
   "groups": [
@@ -69,6 +73,7 @@
   "courseCode": "IF1101",
   "courseName": "Introduccion a la Ingenieria Fisica",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -82,6 +87,7 @@
   "courseCode": "MA0101",
   "courseName": "Matematica General",
   "credits": 2,
+  "area": "Matematicas",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -99,6 +105,7 @@
   "courseCode": "QU1102",
   "courseName": "Laboratorio de Quimica Basica I",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["QU1106"],
   "groups": [
@@ -116,6 +123,7 @@
   "courseCode": "QU1106",
   "courseName": "Quimica Basica I",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["QU1102"],
   "groups": [
@@ -133,6 +141,7 @@
   "courseCode": "SE1100",
   "courseName": "Actividad Cultural I",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -146,6 +155,7 @@
   "courseCode": "SE1200",
   "courseName": "Actividad Deportiva I",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -159,6 +169,7 @@
   "courseCode": "CI1107",
   "courseName": "Comunicacion Oral",
   "credits": 1,
+  "area": "Humanistica",
   "requisites": ["CI1106"],
   "corequisites": [],
   "groups": [
@@ -176,6 +187,7 @@
   "courseCode": "CI1231",
   "courseName": "Ingles II",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": ["CI1230"],
   "corequisites": [],
   "groups": [
@@ -193,6 +205,7 @@
   "courseCode": "CS2101",
   "courseName": "Ambiente Humano",
   "credits": 2,
+  "area": "Humanistica",
   "requisites": ["CI1106", "IF1101"],
   "corequisites": [],
   "groups": [
@@ -210,6 +223,7 @@
   "courseCode": "FH1000",
   "courseName": "Centros de Formacion Humanistica",
   "credits": 0,
+  "area": "Humanistica",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -223,6 +237,7 @@
   "courseCode": "FI1101",
   "courseName": "Fisica General I",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["MA1102"],
   "groups": [
@@ -240,6 +255,7 @@
   "courseCode": "FI1201",
   "courseName": "Laboratorio Fisica General I",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["FI1101"],
   "groups": [
@@ -257,6 +273,7 @@
   "courseCode": "MA1102",
   "courseName": "Calculo Diferencial e Integral",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA0101"],
   "corequisites": [],
   "groups": [
@@ -274,6 +291,7 @@
   "courseCode": "QU1104",
   "courseName": "Laboratorio de Quimica Basica II",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": ["QU1102", "QU1106"],
   "corequisites": ["QU1107"],
   "groups": [
@@ -291,6 +309,7 @@
   "courseCode": "QU1107",
   "courseName": "Quimica Basica II",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["QU1102", "QU1106"],
   "corequisites": ["QU1104"],
   "groups": [
@@ -308,6 +327,7 @@
   "courseCode": "CA2125",
   "courseName": "Elementos de Computacion",
   "credits": 3,
+  "area": "Programacion",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -325,6 +345,7 @@
   "courseCode": "FI1102",
   "courseName": "Fisica General II",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI1101", "MA1102"],
   "corequisites": [],
   "groups": [
@@ -342,6 +363,7 @@
   "courseCode": "FI1202",
   "courseName": "Laboratorio Fisica General II",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": ["FI1201"],
   "corequisites": ["FI1102"],
   "groups": [
@@ -359,6 +381,7 @@
   "courseCode": "MA1103",
   "courseName": "Calculo y Algebra Lineal",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1102"],
   "corequisites": [],
   "groups": [
@@ -376,6 +399,7 @@
   "courseCode": "MI2101",
   "courseName": "Dibujo Tecnico",
   "credits": 3,
+  "area": "Ingenieria",
   "requisites": ["MA0101"],
   "corequisites": [],
   "groups": [
@@ -393,6 +417,7 @@
   "courseCode": "MI2106",
   "courseName": "Estatica",
   "credits": 3,
+  "area": "Ingenieria",
   "requisites": ["FI1101"],
   "corequisites": [],
   "groups": [
@@ -410,6 +435,7 @@
   "courseCode": "SE1400",
   "courseName": "Actividad Cultural-Deportiva",
   "credits": 0,
+  "area": "Cultural-Deportiva",
   "requisites": [],
   "corequisites": [],
   "groups": [
@@ -423,6 +449,7 @@
   "courseCode": "FI2103",
   "courseName": "Fisica General III",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI1101", "MA1102"],
   "corequisites": [],
   "groups": [
@@ -440,6 +467,7 @@
   "courseCode": "IF3502",
   "courseName": "Instrumentacion I",
   "credits": 1,
+  "area": "Electronica",
   "requisites": [],
   "corequisites": ["MT2001", "MT2002"],
   "groups": [
@@ -454,6 +482,7 @@
   "courseCode": "MA2105",
   "courseName": "Ecuaciones Diferenciales",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1103"],
   "corequisites": [],
   "groups": [
@@ -471,6 +500,7 @@
   "courseCode": "MI3117",
   "courseName": "Dinamica",
   "credits": 3,
+  "area": "Ingenieria",
   "requisites": ["MI2106"],
   "corequisites": [],
   "groups": [
@@ -486,6 +516,7 @@
   "courseCode": "MT2001",
   "courseName": "Circuitos Electricos en CC y CA",
   "credits": 3,
+  "area": "Electronica",
   "requisites": ["FI1102"],
   "corequisites": [],
   "groups": [
@@ -501,6 +532,7 @@
   "courseCode": "MT2002",
   "courseName": "Laboratorio de Circuitos de Corriente Continua y Corriente Alterna",
   "credits": 1,
+  "area": "Electronica",
   "requisites": ["MA1102"],
   "corequisites": ["MT2001"],
   "groups": [
@@ -517,6 +549,7 @@
   "courseCode": "PI2610",
   "courseName": "Probabilidad y Estadistica I",
   "credits": 3,
+  "area": "Matematicas",
   "requisites": ["MA1102"],
   "corequisites": ["CA2125"],
   "groups": [
@@ -532,6 +565,7 @@
   "courseCode": "FI2104",
   "courseName": "Fisica General IV",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI1102"],
   "corequisites": ["MA2104"],
   "groups": [
@@ -545,6 +579,7 @@
   "courseCode": "IF3501",
   "courseName": "Termodinamica I",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI2103"],
   "corequisites": [],
   "groups": [
@@ -558,19 +593,21 @@
   "courseCode": "IF3503",
   "courseName": "Instrumentacion II",
   "credits": 1,
+  "area": "Electronica",
   "requisites": ["IF3502"],
   "corequisites": [],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1450"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "MA2104",
   "courseName": "Calculo Superior",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA1103"],
   "corequisites": [],
   "groups": [
@@ -588,6 +625,7 @@
   "courseCode": "MA3106",
   "courseName": "Metodos Numericos",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["MA2105"],
   "corequisites": [],
   "groups": [
@@ -602,6 +640,7 @@
   "courseCode": "PI3612",
   "courseName": "Probabilidad y Estadistica II",
   "credits": 3,
+  "area": "Matematicas",
   "requisites": ["MA1103", "PI2610"],
   "corequisites": [],
   "groups": [
@@ -616,6 +655,7 @@
   "courseCode": "IF3601",
   "courseName": "Metodologia de la Investigacion",
   "credits": 3,
+  "area": "Humanistica",
   "requisites": ["PI3612"],
   "corequisites": [],
   "groups": [
@@ -630,32 +670,35 @@
   "courseCode": "IF3602",
   "courseName": "Metodos Matematicos de Fisica e Ingenieria I",
   "credits": 3,
+  "area": "Matematicas",
   "requisites": ["MA2105"],
   "corequisites": ["IF3603"],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "IF3603",
   "courseName": "Optica",
   "credits": 3,
+  "area": "Ciencias naturales",
   "requisites": ["FI2104"],
   "corequisites": ["IF3604"],
   "groups": [
     {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "IF3604",
   "courseName": "Laboratorio de Optica",
   "credits": 1,
+  "area": "Ciencias naturales",
   "requisites": [],
   "corequisites": ["IF3603"],
   "groups": [
@@ -663,13 +706,14 @@
     {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "0930", "endTime": "1120"}]}
   ],
   "hasScheduleClash": true,
-  "canEnroll": false,
+  "canEnroll": true,
   "hasCycle": false
 },
 {
   "courseCode": "MI3108",
   "courseName": "Mecanica de Fluidos",
   "credits": 4,
+  "area": "Ingenieria",
   "requisites": ["MA2105", "MI3117"],
   "corequisites": [],
   "groups": [
@@ -683,6 +727,7 @@
   "courseCode": "PI5302",
   "courseName": "Diseno de Experimentos",
   "credits": 4,
+  "area": "Matematicas",
   "requisites": ["PI3612"],
   "corequisites": [],
   "groups": [
@@ -690,6 +735,187 @@
     {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "1120"}]},
     {"groupId": "3", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1700", "endTime": "2050"}]},
     {"groupId": "4", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1650"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CS3404",
+  "courseName": "Seminario de Etica para la Ingenieria",
+  "credits": 2,
+  "area": "Humanistica",
+  "requisites": ["IF1101"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1800", "endTime": "2050"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1800", "endTime": "2050"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "EL4513",
+  "courseName": "Teoria Electromagnetica I",
+  "credits": 4,
+  "area": "Ciencias naturales",
+  "requisites": ["FI1102", "MA2105"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1650"}, {"day": "VIE", "startTime": "1500", "endTime": "1650"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "0730", "endTime": "0920"}, {"day": "MIE", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4701",
+  "courseName": "Metodos Matematicos de Fisica e Ingenieria II",
+  "credits": 3,
+  "area": "Matematicas",
+  "requisites": ["IF3602"],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4702",
+  "courseName": "Fisica Computacional I",
+  "credits": 3,
+  "area": "Programacion",
+  "requisites": ["MA3106", "MI2101"],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4703",
+  "courseName": "Analisis de Incertidumbres",
+  "credits": 3,
+  "area": "Matematicas",
+  "requisites": ["PI5302"],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4704",
+  "courseName": "Electiva I",
+  "credits": 3,
+  "area": "Ciencias naturales",
+  "requisites": [],
+  "corequisites": [],
+  "groups": [
+
+  ],
+  "hasScheduleClash": false,
+  "canEnroll": true,
+  "hasCycle": false
+},
+{
+  "courseCode": "CS4402",
+  "courseName": "Seminario de Estudios Costarricenses",
+  "credits": 2,
+  "area": "Humanistica",
+  "requisites": ["CS3404"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1500", "endTime": "1750"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "0930", "endTime": "1220"}]},
+    {"groupId": "5", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1500", "endTime": "1750"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4801",
+  "courseName": "Mecanica Cuantica para Ingenieria",
+  "credits": 3,
+  "area": "Ciencias naturales",
+  "requisites": ["IF3603", "IF4701"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0730", "endTime": "0920"}, {"day": "MAR", "startTime": "0730", "endTime": "0920"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4802",
+  "courseName": "Laboratorio Metrologia I",
+  "credits": 2,
+  "area": "Ingenieria",
+  "requisites": [],
+  "corequisites": ["IF4803"],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "VIE", "startTime": "1300", "endTime": "1550"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "MIE", "startTime": "1400", "endTime": "1650"}]},
+    {"groupId": "3", "hasClash": true, "blocks": [{"day": "MAR", "startTime": "1500", "endTime": "1750"}]},
+    {"groupId": "4", "hasClash": true, "blocks": [{"day": "LUN", "startTime": "1700", "endTime": "1950"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4803",
+  "courseName": "Metrologia Industrial y Legal",
+  "credits": 3,
+  "area": "Ingenieria",
+  "requisites": ["IF4703"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "0930", "endTime": "1120"}, {"day": "MAR", "startTime": "0930", "endTime": "1120"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "IF4804",
+  "courseName": "Fisica Computacional II",
+  "credits": 3,
+  "area": "Programacion",
+  "requisites": ["IF4702"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]},
+    {"groupId": "2", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1300", "endTime": "1450"}, {"day": "MAR", "startTime": "1300", "endTime": "1450"}]}
+  ],
+  "hasScheduleClash": true,
+  "canEnroll": false,
+  "hasCycle": false
+},
+{
+  "courseCode": "MT7001",
+  "courseName": "Analisis y Simulacion de Sistemas",
+  "credits": 3,
+  "area": "Matematicas",
+  "requisites": ["IF4701", "MA2105"],
+  "corequisites": [],
+  "groups": [
+    {"groupId": "1", "hasClash": true, "blocks": [{"day": "JUE", "startTime": "1700", "endTime": "1850"}, {"day": "MAR", "startTime": "1700", "endTime": "1850"}]}
   ],
   "hasScheduleClash": true,
   "canEnroll": false,
