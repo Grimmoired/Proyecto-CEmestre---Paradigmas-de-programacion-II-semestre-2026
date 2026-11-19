@@ -4,7 +4,6 @@ rejection_reason(Courses, Reason) :-
     rule_order(Order),
     first_violation(Order, Courses, Reason).
 
- % y el detaller de la violacion
 first_violation([Rule|_], Courses, reason(Rule, Detail)) :-
     violates(Rule, Courses, Detail),
     !.
