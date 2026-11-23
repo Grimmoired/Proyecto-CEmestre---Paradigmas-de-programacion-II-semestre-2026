@@ -7,20 +7,17 @@
 :- use_module(library(http/json)).
 :- endif.
 
-% run_main(+Args, -ExitCode)
 run_main(Args, ExitCode) :-
     current_prolog_flag(executable, Swipl),
     process_create(Swipl, ['main.pl' | Args],
                    [stdout(null), stderr(null), process(Pid)]),
     process_wait(Pid, exit(ExitCode)).
 
-% read_output(+File, -Dict)
 read_output(File, Dict) :-
     setup_call_cleanup(open(File, read, S, [encoding(utf8)]),
                        json_read_dict(S, Dict, [value_string_as(atom)]),
                        close(S)).
 
-% run_and_read(+Args, -Dict): corre main.pl, exige codigo 0 y lee la salida
 run_and_read(Args, Dict) :-
     last(Args, Output),
     run_main(Args, 0),
@@ -38,19 +35,11 @@ reason_rule(Dict, Id, Rule) :-
 count_rule(Dict, Rule, N) :-
     aggregate_all(count, ( member(R, Dict.results), has_rule(R, Rule) ), N).
 
-% Va en un predicado aparte: dentro de aggregate_all, R.reason se evaluaria
-% antes de que member/2 le diera valor a R.
 has_rule(R, Rule) :-
     R.reason \== null,
     R.reason.rule == Rule.
 
 out(Name, File) :- atomic_list_concat(['tests/salidas/', Name, '.json'], File).
-
-% --- casos -------------------------------------------------------------
-% Cada caso es un predicado propio (t_...). test/2 solo los lista, con su
-% nombre. No se pueden escribir los objetivos directamente dentro de test/2
-% porque la notacion D.campo se evalua al llamar el hecho, antes de que D
-% tenga valor.
 
 test('mixta: entran 347 y salen 347, con ids del 1 al 347', t_mixta_cantidad).
 test('mixta: 42 cumplen, 221 incompatibilidad, 84 balance', t_mixta_conteos).
@@ -156,8 +145,6 @@ t_json_roto :-
 
 t_inexistente :-
     run_main(['noExiste.json', 'policy.pl', 'tests/salidas/x.json'], 1).
-
-% --- ejecucion ---------------------------------------------------------
 
 run_one(Name, Goal) :-
     (   catch(Goal, E, (print_message(error, E), fail))
