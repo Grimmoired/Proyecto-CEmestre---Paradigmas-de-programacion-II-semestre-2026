@@ -57,3 +57,7 @@ dkms.conf
 build/
 compiled/
 .vscode/
+
+Prolog - Etapa 3/tests/salidas/
+Prolog - Etapa 3/Resultado*.json
+Racket - Etapa 2/CombinacionesSalida.json
