@@ -1,0 +1,180 @@
+{
+ "combinationCount": 3,
+ "compliantCount": 1,
+ "policy": {
+  "incompatiblePairs": [
+   {
+    "courseA": "CI3203",
+    "courseB": "PI2609"
+   },
+   {
+    "courseA": "CI1407",
+    "courseB": "MA1102"
+   },
+   {
+    "courseA": "MI2101",
+    "courseB": "QU1107"
+   },
+   {
+    "courseA": "CA2125",
+    "courseB": "QU1107"
+   }
+  ],
+  "maxCoursesPerArea": 2,
+  "maxPercentages": [
+   {
+    "career": "Ingenieria en Computadores",
+    "maxPercentage": 70
+   },
+   {
+    "career": "Ingenieria Fisica",
+    "maxPercentage": 70
+   }
+  ],
+  "ruleOrder": [
+   "balance",
+   "area",
+   "incompatibility"
+  ]
+ },
+ "results": [
+  {
+   "complies": false,
+   "id": 1,
+   "reason": {
+    "courseA": "CI3203",
+    "courseB": "PI2609",
+    "message": "Los cursos CI3203 y PI2609 son incompatibles",
+    "rule": "incompatibility"
+   },
+   "removable": [
+    {
+     "courseCode": "CI3203",
+     "groupId": "1"
+    },
+    {
+     "courseCode": "PI2609",
+     "groupId": "1"
+    }
+   ],
+   "selections": [
+    {
+     "area": "Humanistica",
+     "blocks": [
+      {
+       "day": "DOM",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "CI3203",
+     "courseName": "X",
+     "credits": 2,
+     "groupId": "1"
+    },
+    {
+     "area": "Matematicas",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "PI2609",
+     "courseName": "X",
+     "credits": 2,
+     "groupId": "1"
+    },
+    {
+     "area": "Ciencias naturales",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "QU1107",
+     "courseName": "X",
+     "credits": 3,
+     "groupId": "1"
+    },
+    {
+     "area": "Ciencias naturales",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "QU1104",
+     "courseName": "X",
+     "credits": 1,
+     "groupId": "1"
+    }
+   ],
+   "totalCredits": 8
+  },
+  {
+   "complies": true,
+   "id": 2,
+   "reason": null,
+   "removable": [],
+   "selections": [
+    {
+     "area": "Cultural-Deportiva",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria en Computadores",
+     "courseCode": "SE1100",
+     "courseName": "X",
+     "credits": 0,
+     "groupId": "SE1101_1"
+    }
+   ],
+   "totalCredits": 0
+  },
+  {
+   "complies": false,
+   "id": 3,
+   "reason": {
+    "career": "Ingenieria Fisica",
+    "careerCredits": 3,
+    "maxPercentage": 70,
+    "message": "Ingenieria Fisica tiene 3 de 3 creditos (maximo 70 %)",
+    "rule": "balance",
+    "totalCredits": 3
+   },
+   "removable": [],
+   "selections": [
+    {
+     "area": "Ingenieria",
+     "blocks": [
+      {
+       "day": "LUN",
+       "endTime": "1120",
+       "startTime": "0730"
+      }
+     ],
+     "career": "Ingenieria Fisica",
+     "courseCode": "MI2101",
+     "courseName": "X",
+     "credits": 3,
+     "groupId": "2"
+    }
+   ],
+   "totalCredits": 3
+  }
+ ]
+}

@@ -1,0 +1,1340 @@
+{
+  "combinationCount":24,
+  "compliantCount":0,
+  "policy": {
+    "incompatiblePairs": [
+      {"courseA":"CI3203","courseB":"PI2609"},
+      {"courseA":"CI1407","courseB":"MA1102"},
+      {"courseA":"MI2101","courseB":"QU1107"},
+      {"courseA":"CA2125","courseB":"QU1107"}
+    ],
+    "maxCoursesPerArea":2,
+    "maxPercentages": [
+      {"career":"Ingenieria en Computadores","maxPercentage":70},
+      {"career":"Ingenieria Fisica","maxPercentage":70}
+    ],
+    "ruleOrder": ["balance", "area", "incompatibility" ]
+  },
+  "results": [
+    {
+      "complies":false,
+      "id":1,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":2,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":3,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":4,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":5,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":6,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":7,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":8,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":9,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":10,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":11,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":12,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"1120","startTime":"0730"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":13,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":14,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":15,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":16,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":17,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":18,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"0920","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":19,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":20,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1120","startTime":"0930"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":21,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":22,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [ {"day":"JUE","endTime":"1650","startTime":"1500"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1104",
+	  "courseName":"Laboratorio de Quimica Basica II",
+	  "credits":1,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":23,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"2050","startTime":"1900"},
+	    {"day":"MAR","endTime":"2050","startTime":"1900"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":9
+    },
+    {
+      "complies":false,
+      "id":24,
+      "reason": {
+	"career":"Ingenieria Fisica",
+	"careerCredits":9,
+	"maxPercentage":70,
+	"message":"Ingenieria Fisica tiene 9 de 9 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":9
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Ingenieria",
+	  "blocks": [ {"day":"LUN","endTime":"2050","startTime":"1700"} ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"MI2101",
+	  "courseName":"Dibujo Tecnico",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Ciencias naturales",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1450","startTime":"1300"},
+	    {"day":"MAR","endTime":"1450","startTime":"1300"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"QU1107",
+	  "courseName":"Quimica Basica II",
+	  "credits":3,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1850","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria Fisica",
+	  "courseCode":"CA2125",
+	  "courseName":"Elementos de Computacion",
+	  "credits":3,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":9
+    }
+  ]
+}

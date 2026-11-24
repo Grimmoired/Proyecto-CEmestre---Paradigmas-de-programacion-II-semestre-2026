@@ -1,0 +1,19 @@
+{
+  "combinationCount":0,
+  "compliantCount":0,
+  "policy": {
+    "incompatiblePairs": [
+      {"courseA":"CI3203", "courseB":"PI2609"},
+      {"courseA":"CI1407", "courseB":"MA1102"},
+      {"courseA":"MI2101", "courseB":"QU1107"},
+      {"courseA":"CA2125", "courseB":"QU1107"}
+    ],
+    "maxCoursesPerArea":2,
+    "maxPercentages": [
+      {"career":"Ingenieria en Computadores", "maxPercentage":70},
+      {"career":"Ingenieria Fisica", "maxPercentage":70}
+    ],
+    "ruleOrder": ["balance", "area", "incompatibility" ]
+  },
+  "results": []
+}
