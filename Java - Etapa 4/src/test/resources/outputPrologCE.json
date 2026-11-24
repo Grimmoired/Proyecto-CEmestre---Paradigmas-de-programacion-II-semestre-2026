@@ -1,0 +1,336 @@
+{
+  "combinationCount":7,
+  "compliantCount":0,
+  "policy": {
+    "incompatiblePairs": [
+      {"courseA":"CI3203","courseB":"PI2609"},
+      {"courseA":"CI1407","courseB":"MA1102"},
+      {"courseA":"MI2101","courseB":"QU1107"},
+      {"courseA":"CA2125","courseB":"QU1107"}
+    ],
+    "maxCoursesPerArea":2,
+    "maxPercentages": [
+      {"career":"Ingenieria en Computadores","maxPercentage":70},
+      {"career":"Ingenieria Fisica","maxPercentage":70}
+    ],
+    "ruleOrder": ["balance", "area", "incompatibility" ]
+  },
+  "results": [
+    {
+      "complies":false,
+      "id":1,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1020","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1650","startTime":"1500"},
+	    {"day":"MAR","endTime":"1650","startTime":"1500"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Humanistica",
+	  "blocks": [ {"day":"LUN","endTime":"1220","startTime":"0930"} ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CI1407",
+	  "courseName":"Habilidades de Comunicacion en Ingenieria",
+	  "credits":2,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":2,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":8,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 8 de 8 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":8
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1020","startTime":"0730"},
+	    {"day":"MAR","endTime":"0920","startTime":"0730"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1650","startTime":"1500"},
+	    {"day":"MAR","endTime":"1650","startTime":"1500"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":8
+    },
+    {
+      "complies":false,
+      "id":3,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1950","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1120","startTime":"0930"},
+	    {"day":"MAR","endTime":"1120","startTime":"0930"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Humanistica",
+	  "blocks": [ {"day":"LUN","endTime":"1220","startTime":"0930"} ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CI1407",
+	  "courseName":"Habilidades de Comunicacion en Ingenieria",
+	  "credits":2,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":4,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1950","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1120","startTime":"0930"},
+	    {"day":"MAR","endTime":"1120","startTime":"0930"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"1"
+	},
+	{
+	  "area":"Humanistica",
+	  "blocks": [ {"day":"MAR","endTime":"1550","startTime":"1300"} ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CI1407",
+	  "courseName":"Habilidades de Comunicacion en Ingenieria",
+	  "credits":2,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":5,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":8,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 8 de 8 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":8
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1950","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1120","startTime":"0930"},
+	    {"day":"MAR","endTime":"1120","startTime":"0930"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":8
+    },
+    {
+      "complies":false,
+      "id":6,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":10,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 10 de 10 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":10
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1950","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1650","startTime":"1500"},
+	    {"day":"MAR","endTime":"1650","startTime":"1500"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Humanistica",
+	  "blocks": [ {"day":"LUN","endTime":"1220","startTime":"0930"} ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CI1407",
+	  "courseName":"Habilidades de Comunicacion en Ingenieria",
+	  "credits":2,
+	  "groupId":"1"
+	}
+      ],
+      "totalCredits":10
+    },
+    {
+      "complies":false,
+      "id":7,
+      "reason": {
+	"career":"Ingenieria en Computadores",
+	"careerCredits":8,
+	"maxPercentage":70,
+	"message":"Ingenieria en Computadores tiene 8 de 8 creditos (maximo 70 %)",
+	"rule":"balance",
+	"totalCredits":8
+      },
+      "removable": [],
+      "selections": [
+	{
+	  "area":"Matematicas",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1850","startTime":"1700"},
+	    {"day":"MAR","endTime":"1950","startTime":"1700"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"MA1102",
+	  "courseName":"Calculo Diferencial e Integral",
+	  "credits":4,
+	  "groupId":"2"
+	},
+	{
+	  "area":"Programacion",
+	  "blocks": [
+	    {"day":"JUE","endTime":"1650","startTime":"1500"},
+	    {"day":"MAR","endTime":"1650","startTime":"1500"}
+	  ],
+	  "career":"Ingenieria en Computadores",
+	  "courseCode":"CE1103",
+	  "courseName":"Algoritmos y Estructuras de Datos I",
+	  "credits":4,
+	  "groupId":"2"
+	}
+      ],
+      "totalCredits":8
+    }
+  ]
+}
