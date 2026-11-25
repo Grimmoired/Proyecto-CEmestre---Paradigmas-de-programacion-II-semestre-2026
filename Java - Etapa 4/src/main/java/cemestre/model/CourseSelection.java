@@ -45,6 +45,29 @@ public final class CourseSelection {
     }
 
     @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof CourseSelection)) {
+            return false;
+        }
+        CourseSelection that = (CourseSelection) other;
+        return credits == that.credits
+                && courseCode.equals(that.courseCode)
+                && courseName.equals(that.courseName)
+                && groupId.equals(that.groupId)
+                && career.equals(that.career)
+                && area.equals(that.area)
+                && blocks.equals(that.blocks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(courseCode, courseName, groupId, credits, career, area, blocks);
+    }
+
+    @Override
     public String toString() {
         return courseCode + " grupo " + groupId;
     }
