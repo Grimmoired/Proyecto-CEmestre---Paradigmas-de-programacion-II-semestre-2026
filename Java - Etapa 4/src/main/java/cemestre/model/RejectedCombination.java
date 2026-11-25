@@ -12,12 +12,14 @@ public final class RejectedCombination extends Combination {
     public RejectedCombination(int id, List<CourseSelection> selections, int totalCredits, RejectionReason reason, List<CourseRef> removable) {
         super(id, selections, totalCredits);
         this.reason = Objects.requireNonNull(reason, "reason");
-        this.removable = List.copyOf(removable);
+        this.removable = List.copyOf(Objects.requireNonNull(removable, "removable"));
     }
 
     public RejectionReason getReason() {
         return reason;
     }
+
+    @Override
     public List<CourseRef> getRemovable() {
         return removable;
     }
@@ -30,5 +32,10 @@ public final class RejectedCombination extends Combination {
     @Override
     public String getStatusLabel() {
         return "Rechazada";
+    }
+
+    @Override
+    public String getStatusDetail() {
+        return reason.describe();
     }
 }

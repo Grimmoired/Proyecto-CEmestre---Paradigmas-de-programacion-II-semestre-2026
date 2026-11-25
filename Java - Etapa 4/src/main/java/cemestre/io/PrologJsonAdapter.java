@@ -10,10 +10,9 @@ import cemestre.model.PolicyInfo;
 import cemestre.model.RejectedCombination;
 import cemestre.model.TimeBlock;
 import cemestre.model.ValidCombination;
-import cemestre.model.reason.AreaReason;
-import cemestre.model.reason.BalanceReason;
-import cemestre.model.reason.IncompatibilityReason;
+import cemestre.model.reason.ReasonData;
 import cemestre.model.reason.RejectionReason;
+import cemestre.model.reason.RejectionReasonFactory;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -24,6 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 public final class PrologJsonAdapter implements CombinationSource {
+    private final RejectionReasonFactory reasonFactory = new RejectionReasonFactory();
 
     @Override
     public CombinationSet load(Path file) throws DataLoadException {
@@ -131,18 +131,49 @@ public final class PrologJsonAdapter implements CombinationSource {
     private RejectionReason readReason(JsonObject reason) throws DataLoadException {
         String rule = reason.string("rule");
         String message = reason.string("message");
-        switch (rule) {
-            case "balance":
-                return new BalanceReason(message, reason.string("career"), reason.integer("careerCredits"),
-                        reason.integer("totalCredits"), reason.number("maxPercentage"));
-            case "area":
-                return new AreaReason(message, reason.string("area"), reason.integer("count"),
-                        reason.integer("maxCourses"));
-            case "incompatibility":
-                return new IncompatibilityReason(message, reason.string("courseA"), reason.string("courseB"));
-            default:
-                throw new DataLoadException("regla desconocida '" + rule + "' en " + reason.pathOf("rule")
-                        + " (reglas conocidas: balance, area, incompatibility)");
+        if (!reasonFactory.isKnownRule(rule)) {
+            throw new DataLoadException("regla desconocida '" + rule + "' en " + reason.pathOf("rule")
+                    + " (reglas conocidas: " + String.join(", ", reasonFactory.getKnownRules()) + ")");
+        }
+        try {
+            return reasonFactory.create(rule, message, new JsonReasonData(reason));
+        } catch (IllegalArgumentException e) {
+            throw new DataLoadException(e.getMessage(), e);
+        }
+    }
+
+    private static final class JsonReasonData implements ReasonData {
+        private final JsonObject json;
+
+        JsonReasonData(JsonObject json) {
+            this.json = json;
+        }
+
+        @Override
+        public String text(String field) {
+            try {
+                return json.string(field);
+            } catch (DataLoadException e) {
+                throw new IllegalArgumentException(e.getMessage(), e);
+            }
+        }
+
+        @Override
+        public int integer(String field) {
+            try {
+                return json.integer(field);
+            } catch (DataLoadException e) {
+                throw new IllegalArgumentException(e.getMessage(), e);
+            }
+        }
+
+        @Override
+        public double number(String field) {
+            try {
+                return json.number(field);
+            } catch (DataLoadException e) {
+                throw new IllegalArgumentException(e.getMessage(), e);
+            }
         }
     }
 

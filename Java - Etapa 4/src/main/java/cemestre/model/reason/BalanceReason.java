@@ -1,5 +1,7 @@
 package cemestre.model.reason;
 
+import java.util.Objects;
+
 /** Regla 1: una carrera supero su porcentaje maximo de los creditos de la combinacion. */
 public final class BalanceReason extends RejectionReason {
     private final String career;
@@ -9,7 +11,7 @@ public final class BalanceReason extends RejectionReason {
 
     public BalanceReason(String message, String career, int careerCredits, int totalCredits, double maxPercentage) {
         super("balance", message);
-        this.career = career;
+        this.career = Objects.requireNonNull(career, "career");
         this.careerCredits = careerCredits;
         this.totalCredits = totalCredits;
         this.maxPercentage = maxPercentage;
@@ -39,5 +41,26 @@ public final class BalanceReason extends RejectionReason {
 
     private static String trim(double value) {
         return value == Math.rint(value) ? String.valueOf((long) value) : String.valueOf(value);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof BalanceReason)) {
+            return false;
+        }
+        BalanceReason that = (BalanceReason) other;
+        return getMessage().equals(that.getMessage())
+                && career.equals(that.career)
+                && careerCredits == that.careerCredits
+                && totalCredits == that.totalCredits
+                && Double.compare(maxPercentage, that.maxPercentage) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMessage(), career, careerCredits, totalCredits, maxPercentage);
     }
 }
