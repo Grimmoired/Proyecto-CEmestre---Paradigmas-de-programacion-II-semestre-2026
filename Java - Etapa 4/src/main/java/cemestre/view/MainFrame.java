@@ -67,10 +67,10 @@ public final class MainFrame extends JFrame {
     private JComponent createContent(List<SortCriterion> criteria) {
         JComponent list = new CombinationListPanel(state, criteria);
         JComponent schedule = placeholder("Horario semanal (paso 4)");
-        JComponent summary = placeholder("Resumen de creditos (paso 3)");
+        JComponent summary = new CreditSummaryView(state);
 
         JSplitPane right = new JSplitPane(JSplitPane.VERTICAL_SPLIT, schedule, summary);
-        right.setResizeWeight(0.75);      // al agrandar la ventana, el horario se lleva el 75 % del espacio extra
+        right.setResizeWeight(0.6);      // al agrandar la ventana, el horario se lleva el 75 % del espacio extra
 
         JSplitPane main = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, list, right);
         main.setResizeWeight(0.4);
