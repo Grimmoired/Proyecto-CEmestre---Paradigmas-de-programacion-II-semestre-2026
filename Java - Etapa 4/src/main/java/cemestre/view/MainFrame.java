@@ -14,10 +14,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
-import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Objects;
@@ -66,7 +64,7 @@ public final class MainFrame extends JFrame {
 
     private JComponent createContent(List<SortCriterion> criteria) {
         JComponent list = new CombinationListPanel(state, criteria);
-        JComponent schedule = placeholder("Horario semanal (paso 4)");
+        JComponent schedule = new ScheduleView(state);
         JComponent summary = new CreditSummaryView(state);
 
         JSplitPane right = new JSplitPane(JSplitPane.VERTICAL_SPLIT, schedule, summary);
@@ -75,12 +73,6 @@ public final class MainFrame extends JFrame {
         JSplitPane main = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, list, right);
         main.setResizeWeight(0.4);
         return main;
-    }
-
-    private static JComponent placeholder(String text) {
-        JLabel label = new JLabel(text, SwingConstants.CENTER);
-        label.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
-        return label;
     }
 
     private void chooseFile() {
