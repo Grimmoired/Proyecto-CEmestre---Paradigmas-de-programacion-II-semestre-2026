@@ -21,20 +21,22 @@ import java.awt.Color;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Objects;
+import cemestre.sorting.SortCriterion;
+import java.util.List;
 
 public final class MainFrame extends JFrame {
     private final AppState state;
     private final CombinationSource source;
     private final JLabel statusBar = new JLabel(" ");
 
-    public MainFrame(AppState state, CombinationSource source) {
+    public MainFrame(AppState state, List<SortCriterion> criteria, CombinationSource source) {
         super("CEmestre");
         this.state = Objects.requireNonNull(state, "state");
         this.source = Objects.requireNonNull(source, "source");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setJMenuBar(createMenuBar());
-        add(createContent(), BorderLayout.CENTER);
+        add(createContent(criteria), BorderLayout.CENTER);
 
         statusBar.setBorder(BorderFactory.createEmptyBorder(4, 8, 4, 8));
         add(statusBar, BorderLayout.SOUTH);
@@ -62,8 +64,8 @@ public final class MainFrame extends JFrame {
         return bar;
     }
 
-    private JComponent createContent() {
-        JComponent list = placeholder("Lista de combinaciones (paso 2)");
+    private JComponent createContent(List<SortCriterion> criteria) {
+        JComponent list = new CombinationListPanel(state, criteria);
         JComponent schedule = placeholder("Horario semanal (paso 4)");
         JComponent summary = placeholder("Resumen de creditos (paso 3)");
 

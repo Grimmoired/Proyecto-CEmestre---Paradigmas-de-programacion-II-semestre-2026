@@ -21,7 +21,7 @@ public final class Main {
         SwingUtilities.invokeLater(() -> {
             List<SortCriterion> criteria = SortCriteria.available();
             AppState state = new AppState(criteria.get(0));
-            MainFrame frame = new MainFrame(state, new PrologJsonAdapter());
+            MainFrame frame = new MainFrame(state, criteria, new PrologJsonAdapter());
             frame.setVisible(true);
             if (initialFile != null) {
                 frame.openFile(initialFile);
