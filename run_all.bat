@@ -2,7 +2,6 @@
 rem Recorrido completo de CEmestre: C -> Racket -> Prolog -> Java.
 rem Uso:   run_all.bat [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
 rem Todos los argumentos son opcionales; sin ellos se usan los archivos de ejemplo del repositorio.
-rem Las salidas intermedias quedan en la carpeta salidas\
 setlocal
 
 set "ROOT=%~dp0"
@@ -35,8 +34,9 @@ del /q "%OUT%\*.json" 2>nul
 
 echo.
 echo === 1/4  C: catalogos con choques y elegibilidad ===
-if not exist "%C_DIR%\build\CMakeCache.txt" (
-    cmake -S "%C_DIR%" -B "%C_DIR%\build" -G "MinGW Makefiles" > "%OUT%\compilacion_c.log" 2>&1 || (set "MSG=no se pudo configurar el proyecto de C, ver salidas\compilacion_c.log" & goto :fail)
+rem Se configura si todavia no hay Makefile (si una configuracion anterior fallo, se reintenta).
+if not exist "%C_DIR%\build\Makefile" (
+    cmake -S "%C_DIR%" -B "%C_DIR%\build" -G "MinGW Makefiles" > "%OUT%\compilacion_c.log" 2>&1 || (set "MSG=no se pudo configurar el proyecto de C, ver salidas\compilacion_c.log. Si el log menciona rutas de mas de 250 caracteres, mueva el proyecto a una carpeta corta como C:\cemestre y borre la carpeta C - Etapa 1\build" & goto :fail)
 )
 cmake --build "%C_DIR%\build" >> "%OUT%\compilacion_c.log" 2>&1 || (set "MSG=no se pudo compilar C, ver salidas\compilacion_c.log" & goto :fail)
 set "EXE=%C_DIR%\build\Cemestre.exe"

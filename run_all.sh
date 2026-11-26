@@ -2,7 +2,6 @@
 # Recorrido completo de CEmestre: C -> Racket -> Prolog -> Java.
 # Uso:   ./run_all.sh [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
 # Todos los argumentos son opcionales; sin ellos se usan los archivos de ejemplo del repositorio.
-# Las salidas intermedias quedan en la carpeta salidas/.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -34,7 +33,8 @@ mkdir -p "$OUT"
 rm -f "$OUT"/*.json        # asi nunca se usa por error una salida de una corrida anterior
 
 step "1/4  C: catalogos con choques y elegibilidad"
-[ -f "$C_DIR/build/CMakeCache.txt" ] || cmake -S "$C_DIR" -B "$C_DIR/build" > "$OUT/compilacion_c.log" \
+# Se configura si todavia no hay Makefile (si una configuracion anterior fallo, se reintenta).
+[ -f "$C_DIR/build/Makefile" ] || cmake -S "$C_DIR" -B "$C_DIR/build" > "$OUT/compilacion_c.log" \
     || fail "no se pudo configurar el proyecto de C (ver salidas/compilacion_c.log)"
 cmake --build "$C_DIR/build" >> "$OUT/compilacion_c.log" || fail "no se pudo compilar C (ver salidas/compilacion_c.log)"
 EXE="$C_DIR/build/Cemestre"
