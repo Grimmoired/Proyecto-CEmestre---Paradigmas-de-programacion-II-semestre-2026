@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Recorrido completo de CEmestre: C -> Racket -> Prolog -> Java.
-# Uso:   ./run_all.sh [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
-# Todos los argumentos son opcionales; sin ellos se usan los archivos de ejemplo del repositorio.
+# Recorrido completo del proyecto: C -> Racket -> Prolog -> Java.
+# Para correrlo: run_all.bat [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
+# Todos los argumentos son opcionales; sin ellos se usan los archivos asignados por defecto de cada etapa.
 # Las salidas intermedias quedan en la carpeta salidas/.
 set -euo pipefail
 
