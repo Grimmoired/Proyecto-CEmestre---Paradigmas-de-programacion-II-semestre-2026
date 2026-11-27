@@ -1,7 +1,7 @@
 @echo off
-rem Recorrido completo de CEmestre: C -> Racket -> Prolog -> Java.
-rem Uso:   run_all.bat [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
-rem Todos los argumentos son opcionales; sin ellos se usan los archivos de ejemplo del repositorio.
+rem Recorrido completo del proyecto: C -> Racket -> Prolog -> Java.
+rem Para correrlo: run_all.bat [preferencias.rktd] [politica.pl] [historialCE.txt] [historialFI.txt]
+rem Todos los argumentos son opcionales; sin ellos se usan los archivos asignados por defecto de cada etapa.
 rem Las salidas intermedias quedan en la carpeta salidas\
 setlocal
 
